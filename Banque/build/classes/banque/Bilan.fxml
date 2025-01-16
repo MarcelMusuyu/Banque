@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="creation" prefHeight="702.0" prefWidth="1387.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.geometry.Insets?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;?import javafx.scene.layout.VBox?&gt;&lt;VBox layoutX=&quot;373.0&quot; layoutY=&quot;31.0&quot; prefHeight=&quot;482.0&quot; prefWidth=&quot;252.0&quot; spacing=&quot;20.0&quot; style=&quot;-fx-background-color: #2A3F54;&quot; xmlns=&quot;http://javafx.com/javafx/17&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;children&gt;      &lt;TextField prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot;&gt;         &lt;VBox.margin&gt;            &lt;Insets top=&quot;5.0&quot; /&gt;         &lt;/VBox.margin&gt;      &lt;/TextField&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;15.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;50.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;85.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;120.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;155.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;190.0&quot; prefHeight=&quot;35.0&quot; prefWidth;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banque.BilanController">
+    <children>
+      <Pane layoutX="-10.0" layoutY="299.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="292.0" prefWidth="1416.0">
+         <children>
+            <Line endX="80.0" endY="-47.0" layoutX="635.0" layoutY="-41.0" opacity="0.76" startX="80.0" startY="324.0" stroke="#2a3f54" strokeWidth="8.0" />
+            <Line endX="408.5" endY="-1.0" layoutX="216.0" layoutY="28.0" startX="-216.0" stroke="WHITE" strokeWidth="2.0" />
+            <Line endX="338.0" layoutX="850.0" layoutY="28.0" startX="-224.5" stroke="WHITE" strokeWidth="2.0" />
+            <VBox layoutX="393.0" layoutY="-54.0" opacity="0.76" prefHeight="312.0" prefWidth="315.0" spacing="10.0" style="-fx-background-color: #2A3F54;">
+               <children>
+                  <TextField prefHeight="28.0" prefWidth="252.0" promptText="Solde de trésorerie vis-à-visde la banque centrale">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="15.0" prefHeight="28.0" prefWidth="252.0" promptText="Titre de placement-portefeuille deliquidite stable" />
+                  <TextField layoutX="10.0" layoutY="50.0" prefHeight="28.0" prefWidth="252.0" promptText="Titre négociable à la valeurdu  marché" />
+                  <TextField layoutX="10.0" layoutY="85.0" prefHeight="26.0" prefWidth="252.0" promptText="Placements auprès des banques et institutions de crédits" />
+                  <TextField layoutX="10.0" layoutY="120.0" prefHeight="28.0" prefWidth="252.0" promptText="Prets et avances  à la clientèle" />
+                  <TextField layoutX="10.0" layoutY="155.0" prefHeight="26.0" prefWidth="252.0" promptText="Autres investissements-subventions" />
+                  <TextField layoutX="10.0" layoutY="190.0" prefHeight="28.0" prefWidth="252.0" promptText="Actifs immobilisés-nets dedépréciations " />
+                  <TextField layoutX="10.0" layoutY="225.0" prefHeight="27.0" prefWidth="252.0" promptText="Autres Acti" />
+                  <TextField editable="false" layoutX="10.0" layoutY="260.0" prefHeight="28.0" prefWidth="252.0" promptText="Total" />
+               </children>
+            </VBox>
+            <VBox layoutX="34.0" layoutY="-52.0" prefHeight="317.0" prefWidth="362.0" spacing="5.0">
+               <children>
+                  <Label opacity="0.76" prefHeight="27.0" prefWidth="358.0" style="-fx-background-color: #2A3F54;" text="Solde de trésorerie vis-à-vis de la banque centrale" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" opacity="0.76" prefHeight="33.0" prefWidth="358.0" style="-fx-background-color: #2A3F54;" text="Titre de placement-portefeuille de liquidite stable" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="61.0" opacity="0.76" prefHeight="27.0" prefWidth="358.0" style="-fx-background-color: #2A3F54;" text="Titre négociable à la valeur du  marché" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="112.0" opacity="0.76" prefHeight="31.0" prefWidth="358.0" style="-fx-background-color: #2A3F54;" text="Placements auprès des banques  et institutions de crédits" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="163.0" opacity="0.76" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #2A3F54;" text="Prets et avances  à la clientèle" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="214.0" opacity="0.76" prefHeight="31.0" prefWidth="356.0" style="-fx-background-color: #2A3F54;" text="Autres investissements-subventions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="265.0" opacity="0.76" prefHeight="29.0" prefWidth="356.0" style="-fx-background-color: #2A3F54;" text="Actifs immobilisés-nets de dépréciations " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="316.0" opacity="0.76" prefHeight="27.0" prefWidth="356.0" style="-fx-background-color: #2A3F54;" text="Autres Actifs" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="367.0" opacity="0.76" prefHeight="35.0" prefWidth="356.0" style="-fx-background-color: #2A3F54;" text="Total" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="720.0" layoutY="-55.0" prefHeight="345.0" prefWidth="364.0" spacing="5.0">
+               <children>
+                  <Label opacity="0.76" prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Dettes envers les banques et institutions de crédits" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" opacity="0.76" prefHeight="27.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Financement du portefeuille de titres négociable" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="61.0" opacity="0.76" prefHeight="23.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Dettes aux autres clients et déposants" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="112.0" opacity="0.76" prefHeight="21.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Certificat de dépot" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="163.0" opacity="0.76" prefHeight="25.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Autres dettes" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="214.0" opacity="0.76" prefHeight="27.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Dettes aux Administrations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="265.0" opacity="0.76" prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Actifs immobilisés-nets de dépréciations " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="316.0" opacity="0.76" prefHeight="27.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Dette envers les organismes internationaux  de prets" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="367.0" opacity="0.76" prefHeight="25.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Dettes subordonnées" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="402.0" opacity="0.76" prefHeight="24.0" prefWidth="362.0" style="-fx-background-color: #2A3F54;" text="Capital social" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label opacity="0.76" prefHeight="31.0" prefWidth="364.0" style="-fx-background-color: #2A3F54;" text="Total" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="1085.0" layoutY="-58.0" opacity="0.76" prefHeight="345.0" prefWidth="309.0" spacing="5.0" style="-fx-background-color: #2A3F54;">
+               <children>
+                  <TextField prefHeight="28.0" prefWidth="252.0" promptText="Dettes envers les banques etinstitutions de crédits">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField layoutX="10.0" layoutY="15.0" prefHeight="28.0" prefWidth="252.0" promptText="Financement du portefeuille detitres négociable" />
+                  <TextField layoutX="10.0" layoutY="50.0" prefHeight="23.0" prefWidth="252.0" promptText="Dettes aux autres clients etdéposants" />
+                  <TextField layoutX="10.0" layoutY="85.0" prefHeight="27.0" prefWidth="252.0" promptText="Certificat de dépot" />
+                  <TextField layoutX="10.0" layoutY="120.0" prefHeight="28.0" prefWidth="252.0" promptText="Autres dettes" />
+                  <TextField layoutX="10.0" layoutY="155.0" prefHeight="28.0" prefWidth="252.0" promptText="Dettes aux Administrations" />
+                  <TextField layoutX="10.0" layoutY="190.0" prefHeight="28.0" prefWidth="252.0" promptText="Actifs immobilisés-nets dedépréciations " />
+                  <TextField layoutX="10.0" layoutY="225.0" prefHeight="27.0" prefWidth="252.0" promptText="Dette envers les organismesinternationaux  de prets" />
+                  <TextField layoutX="10.0" layoutY="260.0" prefHeight="28.0" prefWidth="252.0" promptText="Dettes subordonnées" />
+                  <TextField layoutX="10.0" layoutY="455.0" prefHeight="27.0" prefWidth="252.0" promptText="Capital social" />
+                  <TextField editable="false" layoutX="10.0" layoutY="510.0" prefHeight="28.0" prefWidth="252.0" promptText="Total" />
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Label layoutX="24.0" layoutY="208.0" opacity="0.76" prefHeight="34.0" prefWidth="676.0" style="-fx-background-color: #2A3F54;" text="Actifs en pourcentage de l'actif total" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="711.0" layoutY="206.0" opacity="0.76" prefHeight="34.0" prefWidth="675.0" style="-fx-background-color: #2A3F54;" text="Capitaux et dettes en pourcentage du passif total" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="419.0" layoutY="173.0" prefHeight="20.0" prefWidth="108.0" text="En date du " textFill="#2a3f54">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="535.0" layoutY="174.0" prefHeight="25.0" prefWidth="151.0" promptText="Date" />
+      <ProgressBar layoutX="7.0" layoutY="674.0" prefHeight="14.0" prefWidth="492.0" />
+      <ProgressBar layoutX="862.0" layoutY="673.0" prefHeight="11.0" prefWidth="534.0" />
+      <Button fx:id="equilibrer" layoutX="775.0" layoutY="177.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="132.0" text="Equilibrer" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="enregistrer" layoutX="992.0" layoutY="177.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="132.0" text="Enregistrer" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="imprimer" layoutX="1194.0" layoutY="177.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="132.0" text="Imprimer" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="11.0" />
+         </font>
+      </Button>
+      <Label layoutX="129.0" layoutY="686.0" text="Actif  Progress" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="1124.0" layoutY="687.0" text="Passif  Progress" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="17.0" />
+         </font>
+      </Label>
+      <VBox layoutX="1.0" layoutY="46.0" prefHeight="128.0" prefWidth="1404.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="98.0" fitWidth="146.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label prefHeight="66.0" prefWidth="222.0" text="BILAN  BANCAIRE" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="21.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="105.0" top="-90.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="103.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="290.0" top="-80.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="150.0" layoutX="300.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/1771174.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="450.0" top="-95.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="93.0" fitWidth="125.0" layoutX="460.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/money-transfer.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="630.0" top="-100.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="114.0" layoutX="300.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="750.0" top="-95.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="190.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/icones/images%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="870.0" top="-102.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="121.0" layoutX="880.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images.jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1040.0" top="-100.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="121.0" layoutX="1050.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/images.jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1150.0" top="-110.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="118.0" layoutX="1190.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/6078423.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1270.0" top="-80.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label layoutX="192.0" layoutY="105.0" prefHeight="66.0" prefWidth="539.0" text="NRCCM : CD/LSHI/623-245-0515-DGH  -Id Nat. 6-916-E466T- N°Impot : G65544788F" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+         <padding>
+            <Insets top="30.0" />
+         </padding>
+      </Label>
+      <ToolBar prefHeight="41.0" prefWidth="1410.0" style="-fx-background-color: #2A3F54;">
+         <items>
+            <HBox prefHeight="13.0" prefWidth="60.0">
+               <children>
+                  <ImageView fx:id="home" fitHeight="27.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3208668.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="23.0" prefWidth="64.0">
+               <children>
+                  <ImageView fx:id="load" fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2794872.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="21.0" prefWidth="67.0">
+               <children>
+                  <ImageView fx:id="share" fitHeight="28.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/4500429.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="22.0" prefWidth="66.0">
+               <children>
+                  <ImageView fx:id="print" fitHeight="25.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/1008575.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="522.0" layoutY="10.0" prefHeight="24.0" prefWidth="60.0">
+               <children>
+                  <ImageView fx:id="export" fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/124135.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="568.0" layoutY="7.0" prefHeight="26.0" prefWidth="52.0">
+               <children>
+                  <ImageView fx:id="save" fitHeight="28.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/907027.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="actualiser" mnemonicParsing="false" style="-fx-background-color: #2A3F54;" text="Actualiser" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+      <ImageView fitHeight="86.0" fitWidth="147.0" layoutX="715.0" layoutY="586.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/banking/images%20(4).jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="147.0" layoutX="862.0" layoutY="592.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/banking/images%20(4).jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="147.0" layoutX="991.0" layoutY="589.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/banking/images%20(4).jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="147.0" layoutX="1118.0" layoutY="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/banking/images%20(4).jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="86.0" fitWidth="147.0" layoutX="1250.0" layoutY="588.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/banking/images%20(4).jpeg" />
+         </image>
+      </ImageView>
+      <HBox layoutX="20.0" layoutY="563.0" prefHeight="94.0" prefWidth="412.0" style="-fx-background-color: white;">
+         <children>
+            <ProgressIndicator minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="90.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressIndicator>
+            <ProgressIndicator layoutX="10.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="88.0" progress="0.8">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressIndicator>
+            <ProgressIndicator layoutX="114.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="90.0" progress="0.35">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressIndicator>
+            <ProgressIndicator layoutX="218.0" layoutY="10.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="88.0" prefWidth="97.0" progress="1.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ProgressIndicator>
+         </children>
+      </HBox>
+      <Label layoutX="555.0" layoutY="584.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="495.0" layoutY="606.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/Img/images.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="416.0" layoutY="646.0" opacity="0.77" prefHeight="52.0" prefWidth="365.0" text="©2022 All Rights Reserved. MarsTech &amp; MarsDesign. &#10;&#9;&#9;&#9;&#9;Privacy and Terms" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="173.0" layoutX="676.0" layoutY="640.0" opacity="0.31" startX="-466.0" stroke="#f8f8f8" strokeWidth="0.5" />
+    </children>
+</AnchorPane>

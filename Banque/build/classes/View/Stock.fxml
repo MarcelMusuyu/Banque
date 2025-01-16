@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="content" opacity="0.88" prefHeight="649.0" prefWidth="1413.0" style="-fx-background-color: #2A3F54;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.StockController">
+    <children>
+      <Label layoutX="26.0" layoutY="522.0" prefHeight="17.0" prefWidth="87.0" text="Solde" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <HBox layoutX="-1.0" layoutY="26.0" prefHeight="120.0" prefWidth="1414.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="152.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/téléchargement%20(1).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="152.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/images%20(6).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="220.0" layoutX="190.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/téléchargement%20(5).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="169.0" layoutX="370.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/icones/images%20(4).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="250.0" top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="267.0" fitWidth="278.0" layoutX="550.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/images%20(9).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="119.0" fitWidth="274.0" layoutX="730.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/téléchargement%20(3).jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Pane fx:id="tfPTTC" layoutX="-6.0" layoutY="187.0" prefHeight="362.0" prefWidth="1373.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <TableView fx:id="tableStock" editable="true" layoutX="8.0" layoutY="135.0" prefHeight="319.0" prefWidth="1358.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="colDateEntree" prefWidth="103.0" text="Date" />
+                  <TableColumn fx:id="colQteEntree" prefWidth="106.0" text="Quantité" />
+                  <TableColumn fx:id="colCoutUnitaireEntree" prefWidth="115.0" text="Cout unitaire" />
+                  <TableColumn fx:id="colCoutTotalEntree" prefWidth="124.0" text="Cout total" />
+                  <TableColumn fx:id="colDateSortie" prefWidth="102.0" text="Date" />
+                  <TableColumn fx:id="colQteSortie" prefWidth="89.0" text="Quantité" />
+                  <TableColumn fx:id="colCoutUnitaireSortie" prefWidth="125.0" text="Cout unitaire" />
+                  <TableColumn fx:id="colCoutTotalSortie" prefWidth="115.0" text="Cout total" />
+                  <TableColumn fx:id="colDateStock" prefWidth="109.99993896484375" text="Date" />
+                  <TableColumn fx:id="colQteStock" prefWidth="104.0" text="Quantité" />
+                  <TableColumn fx:id="colCoutUnitaireStock" prefWidth="140.0" text="Cout unitaire" />
+                  <TableColumn fx:id="colCoutTotalStock" prefWidth="149.0" text="Cout total" />
+              </columns>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TableView>
+            <Line endX="1317.0" endY="-11.0" layoutX="101.0" layoutY="112.0" startX="-100.0" stroke="WHITE" strokeWidth="4.0" />
+            <Line endX="335.17156982421875" endY="35.0" layoutX="124.0" layoutY="102.0" startX="335.17156982421875" startY="6.0" stroke="WHITE" strokeWidth="4.0" />
+            <Line endX="335.17156982421875" endY="27.0" layoutX="555.0" layoutY="110.0" startX="335.17156982421875" startY="-4.0" stroke="WHITE" strokeWidth="4.0" />
+            <Label layoutX="647.0" layoutY="103.0" prefHeight="32.0" prefWidth="169.0" text="Sorties" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="1138.0" layoutY="106.0" prefHeight="32.0" prefWidth="169.0" text="Stocks" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="ajouter" layoutX="36.0" layoutY="66.0" mnemonicParsing="false" onAction="#Stockage" prefHeight="30.0" prefWidth="115.0" text="Ajouter" textFill="#2a3f54">
+               <font>
+                  <Font name="System Italic" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="#fcf2f2" layoutX="224.0" layoutY="75.0" lineSpacing="5.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour la gestion de stock, les methodes appliquées sont &#10;la methode LIFO (last in first out) et FIFO ( first in first out)">
+               <font>
+                  <Font name="Baskerville Old Face" size="14.0" />
+               </font>
+            </Text>
+            <Label layoutX="700.0" layoutY="65.0" prefHeight="32.0" prefWidth="169.0" text="Nom de l'opération" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfOperation" layoutX="831.0" layoutY="69.0" prefHeight="25.0" prefWidth="556.0" promptText="Opération inscrite" />
+         </children>
+      </Pane>
+      <Label layoutX="586.0" layoutY="10.0" prefHeight="95.0" prefWidth="185.0" text="MarStore" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="38.0" />
+         </font>
+      </Label>
+      <AmbientLight color="CHARTREUSE" lightOn="true" />
+      <MenuBar fx:id="titleBar" layoutX="-2.0" layoutY="2.0" prefHeight="25.0" prefWidth="1414.0">
+        <menus>
+          <Menu fx:id="mnFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="mnItemNew" mnemonicParsing="false" text="New" />
+                  <MenuItem fx:id="mnItemOpen" mnemonicParsing="false" text="Open" />
+                  <MenuItem fx:id="mnItemSave" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="mnItemModify" mnemonicParsing="false" text="Modify" />
+                  <MenuItem fx:id="mnItemClose" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnVariations" mnemonicParsing="false" text="Variations">
+            <items>
+              <MenuItem fx:id="mnItemStockIni" mnemonicParsing="false" text="Stock initial" />
+                  <MenuItem fx:id="mnItemStockFi" mnemonicParsing="false" text="Stock final" />
+            </items>
+          </Menu>
+          <Menu fx:id="mnStatistiques" mnemonicParsing="false" text="Statistiques">
+            <items>
+              <MenuItem fx:id="mnItemEntree" mnemonicParsing="false" text="Entrees" />
+                  <MenuItem fx:id="mnItemSortie" mnemonicParsing="false" text="Sorties" />
+                  <MenuItem fx:id="mnItemStock" mnemonicParsing="false" text="Stocks" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </MenuBar>
+      <HBox fx:id="entrees" layoutX="1.0" layoutY="148.0" prefHeight="95.0" prefWidth="513.0" spacing="20.0" style="-fx-background-color: #0E76A8;">
+         <children>
+            <DatePicker fx:id="tfdateEntree" prefHeight="25.0" prefWidth="128.0" promptText="Date">
+               <HBox.margin>
+                  <Insets left="10.0" top="50.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Date :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-100.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfQteEntree" prefHeight="25.0" prefWidth="101.0" promptText="Quantite">
+               <HBox.margin>
+                  <Insets left="-70.0" top="50.0" />
+               </HBox.margin></TextField>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Entrées" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-230.0" top="-5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfcoutUnitaireEntree" prefHeight="25.0" prefWidth="109.0" promptText="Cout unitaire">
+               <HBox.margin>
+                  <Insets left="70.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="tfcouttotalEntree" editable="false" prefHeight="25.0" prefWidth="103.0" promptText="Cout total">
+               <HBox.margin>
+                  <Insets left="-10.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Quantité :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-320.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="134.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout unitaire :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-50.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Line endX="-101.70710754394531" startX="-100.0" />
+            <Label layoutX="276.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout total :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-70.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="sorties" layoutX="462.0" layoutY="148.0" prefHeight="95.0" prefWidth="502.0" spacing="20.0" style="-fx-background-color: #0E76A8;">
+         <children>
+            <Line endX="-100.0" endY="89.17156982421875" startX="-100.0" stroke="#2a3f54" strokeWidth="4.0" />
+            <DatePicker fx:id="tfdateSortie" prefHeight="25.0" prefWidth="128.0" promptText="Date">
+               <HBox.margin>
+                  <Insets left="10.0" top="50.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Date :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-100.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfQteSortie" prefHeight="25.0" prefWidth="101.0" promptText="Quantite">
+               <HBox.margin>
+                  <Insets left="-70.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Sorties" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-250.0" top="-5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfcoutUnitaireSortie" prefHeight="25.0" prefWidth="109.0" promptText="Cout unitaire">
+               <HBox.margin>
+                  <Insets left="80.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="tfcoutTotalSortie" editable="false" prefHeight="25.0" prefWidth="103.0" promptText="Cout total">
+               <HBox.margin>
+                  <Insets left="-15.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Quantité :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-320.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="134.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout unitaire :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-50.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="276.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout total :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-45.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox fx:id="stock" layoutX="936.0" layoutY="147.0" prefHeight="95.0" prefWidth="476.0" spacing="20.0" style="-fx-background-color: #0E76A8;">
+         <children>
+            <Line endX="-101.03553771972656" endY="91.29289245605469" startX="-100.0" stroke="#2a3f54" strokeWidth="4.0" />
+            <DatePicker fx:id="tfDateStock" prefHeight="25.0" prefWidth="128.0" promptText="Date">
+               <HBox.margin>
+                  <Insets left="-5.0" top="50.0" />
+               </HBox.margin>
+            </DatePicker>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Date :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-100.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfQteStock" prefHeight="25.0" prefWidth="101.0" promptText="Quantite">
+               <HBox.margin>
+                  <Insets left="-60.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="32.0" prefWidth="142.0" text="Stocks" textFill="#f8f8f8">
+               <font>
+                  <Font name="Baskerville Old Face" size="25.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-230.0" top="-5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfcoutUnitaireStock" prefHeight="25.0" prefWidth="109.0" promptText="Cout unitaire">
+               <HBox.margin>
+                  <Insets left="67.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="tfcoutTotalStock" editable="false" prefHeight="25.0" prefWidth="103.0" promptText="Cout total">
+               <HBox.margin>
+                  <Insets left="-15.0" top="50.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Quantité :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-320.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="134.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout unitaire :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-50.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="276.0" layoutY="25.0" prefHeight="32.0" prefWidth="142.0" text="Cout total :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-45.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="190.0" layoutY="292.0" prefHeight="32.0" prefWidth="169.0" text="Entrées" textFill="#f8f8f8">
+         <font>
+            <Font name="Baskerville Old Face" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCloturer" layoutX="476.0" layoutY="651.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" text="Cloturer">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <ProgressIndicator layoutX="13.0" layoutY="651.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressIndicator layoutX="86.0" layoutY="652.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressIndicator layoutX="158.0" layoutY="648.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressIndicator layoutX="230.0" layoutY="649.0" prefHeight="40.0" prefWidth="87.0" />
+      <Button fx:id="btnAnnuler" layoutX="818.0" layoutY="650.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" text="Annuler">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSave" layoutX="647.0" layoutY="651.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="136.0" text="Sauvegarder">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Button>
+      <ProgressIndicator layoutX="295.0" layoutY="651.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressIndicator layoutX="348.0" layoutY="649.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressIndicator layoutX="400.0" layoutY="652.0" prefHeight="40.0" prefWidth="87.0" />
+      <ProgressBar layoutX="969.0" layoutY="643.0" prefHeight="19.0" prefWidth="200.0" />
+      <ProgressBar layoutX="970.0" layoutY="667.0" prefHeight="19.0" prefWidth="200.0" />
+      <ProgressBar layoutX="1191.0" layoutY="641.0" prefHeight="19.0" prefWidth="200.0" />
+      <ProgressBar layoutX="1192.0" layoutY="665.0" prefHeight="19.0" prefWidth="200.0" />
+    </children>
+</AnchorPane>

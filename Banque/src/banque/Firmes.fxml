@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="678.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banque.EntrepriseController">
+  <children>
+      <MenuBar prefHeight="30.0" prefWidth="1394.0" style="-fx-background-color: #d7d8db;">
+         <menus>
+            <Menu fx:id="mnfinanciere" text="Financiere">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="capital propre" />
+                  <MenuItem mnemonicParsing="false" text="investissement exterieur" />
+                  <MenuItem mnemonicParsing="false" text="autofinancement" />
+                  <MenuItem mnemonicParsing="false" text="capitaux empruntés" />
+                  <MenuItem mnemonicParsing="false" text="securité financière" />
+                  <MenuItem mnemonicParsing="false" text="banque" />
+                  <MenuItem mnemonicParsing="false" text="caisse" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack43" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/6912022.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mncommerciale" mnemonicParsing="false" text="Commerciale">
+               <items>
+                  <Menu fx:id="mnApprov" mnemonicParsing="false" text="Approvisionnement">
+                     <items>
+                        <MenuItem fx:id="stock" mnemonicParsing="false" onAction="#Stock" text="Gestion stock">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mndistribution" mnemonicParsing="false" text="Distribution">
+                     <items>
+                        <MenuItem fx:id="facturation" mnemonicParsing="false" onAction="#Facture" text="Facturation">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="livraison" mnemonicParsing="false" text="Livraison" />
+                        <MenuItem fx:id="caisse" mnemonicParsing="false" text="Caisse" />
+                        <MenuItem fx:id="ventes" mnemonicParsing="false" onAction="#Ventes" text="Ventes" />
+                     </items>
+                  </Menu>
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack44" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/6205235.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mncomptabilite" mnemonicParsing="false" text="Comptabilite">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Compte" />
+                  <MenuItem mnemonicParsing="false" text="Bilan" />
+                  <MenuItem mnemonicParsing="false" text="Balance" />
+                  <MenuItem mnemonicParsing="false" text="Journal" />
+                  <MenuItem mnemonicParsing="false" text="Plan comptable" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack41" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/781831.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnsociale" mnemonicParsing="false" text="Sociale">
+               <items>
+                  <Menu fx:id="mnfiscale" mnemonicParsing="false" text="Fiscalite">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Impot" />
+                        <MenuItem mnemonicParsing="false" text="Taxe" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mncomptabilite1" mnemonicParsing="false" text="Ressources humaines">
+                     <items>
+                        <MenuItem fx:id="mnItemsalaireBase" mnemonicParsing="false" text="salaire de base" />
+                        <MenuItem fx:id="mnItemfichePaie" mnemonicParsing="false" onAction="#FichePaie" text="fiche de paie">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="I" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="mnItemIndemnites" mnemonicParsing="false" text="indemnités" />
+                        <MenuItem fx:id="mnItemAllocations" mnemonicParsing="false" text="allocations familliales" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Syndicale" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack42" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/185972.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mninformatique" mnemonicParsing="false" text="Informatique">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="bureautique" />
+                  <MenuItem mnemonicParsing="false" text="reseaux" />
+                  <MenuItem mnemonicParsing="false" text="imprimerie">
+                     <graphic>
+                        <ImageView fx:id="imgBack48" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/2976087.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack45" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3953471.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnlogistique" mnemonicParsing="false" text="Logistique">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Amortissement" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack46" fitHeight="28.0" fitWidth="38.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/Img/technicien.jpeg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnadministraative" mnemonicParsing="false" text="Administrative">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Prevoir" />
+                  <MenuItem mnemonicParsing="false" text="Organiser" />
+                  <MenuItem mnemonicParsing="false" text="Commander" />
+                  <MenuItem mnemonicParsing="false" text="Coordonner" />
+                  <MenuItem mnemonicParsing="false" text="Controler" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack47" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/1616039.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnproduction" mnemonicParsing="false" text="Production">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack4" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/3513538.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnstatistiques" mnemonicParsing="false" text="Statistiques">
+               <items>
+                  <Menu fx:id="mnproduction1" mnemonicParsing="false" text="Ventes">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="villes" />
+                        <MenuItem mnemonicParsing="false" text="mois" />
+                        <MenuItem mnemonicParsing="false" text="genres" />
+                        <MenuItem mnemonicParsing="false" onAction="#RepportSales" text="rayons de ventes" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mnproduction11" mnemonicParsing="false" text="Achats">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="marchandises" />
+                        <MenuItem mnemonicParsing="false" text="matières premières" />
+                        <MenuItem mnemonicParsing="false" text="emballages" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="mnGenerales" mnemonicParsing="false" onAction="#States" text="Generales" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack3" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/external-analytics-business-process-outsourcing-flat-wichaiwi.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnmarketing" mnemonicParsing="false" text="Marketing">
+               <items>
+                  <MenuItem fx:id="mnItempublicite" mnemonicParsing="false" onAction="#publicite" text="publicité">
+                     <graphic>
+                        <ImageView fx:id="imgBack4812" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/2838665.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" text="promotion" />
+                  <MenuItem mnemonicParsing="false" text="produit" />
+                  <MenuItem mnemonicParsing="false" text="prix">
+                     <graphic>
+                        <ImageView fx:id="imgBack4811" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/euro-exchange.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" text="place">
+                     <graphic>
+                        <ImageView fx:id="imgBack481" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/869161.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack2" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/e-magazine.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnmarketing1" mnemonicParsing="false" text="Secretariat">
+               <items>
+                  <MenuItem fx:id="lettre" mnemonicParsing="false" onAction="#Correspondance" text="correspondance">
+                     <graphic>
+                        <ImageView fx:id="imgBack48111" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/911993.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="circulaire">
+                     <graphic>
+                        <ImageView fx:id="imgBack481111" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/e-mail.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" text="communication">
+                     <graphic>
+                        <ImageView fx:id="imgBack481112" fitHeight="21.0" fitWidth="20.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/724664.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack21" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/ICONES2/134908.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="mnmarketing11" mnemonicParsing="false" text="Aide">
+               <items>
+                  <MenuItem fx:id="lettre1" mnemonicParsing="false" onAction="#Correspondance" text="correspondance" />
+                  <MenuItem mnemonicParsing="false" text="circulaire" />
+                  <MenuItem mnemonicParsing="false" text="communication" />
+               </items>
+               <graphic>
+                  <ImageView fx:id="imgBack1" fitHeight="29.0" fitWidth="28.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/help.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+         </menus>
+      </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="285.0" style="-fx-background-color: #d7d6d6;">
+          <children>
+            <Label alignment="CENTER" layoutX="22.0" layoutY="-2.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Master" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color red="0.624" green="0.624" blue="0.624" fx:id="x2" />
+              </textFill>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/1616039.png" />
+                           </image></ImageView>
+                     </graphic>
+            </Label>
+                  <Button layoutY="38.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.8" prefHeight="49.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Administrative" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/2961153.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutY="106.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.81" prefHeight="49.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Finance" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/6078423.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="-1.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.73" prefHeight="49.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Legislation" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/6197607.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="-1.0" layoutY="305.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.87" prefHeight="49.0" prefWidth="285.0" style="-fx-background-color: #0E76A8#007bff;" text="Production" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/6093827.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <MenuButton alignment="BOTTOM_CENTER" layoutX="2.0" layoutY="369.0" mnemonicParsing="false" opacity="0.84" popupSide="RIGHT" prefHeight="47.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Comptabilite" textFill="WHITE">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Compte" />
+                      <MenuItem mnemonicParsing="false" text="Bilan" />
+                        <MenuItem mnemonicParsing="false" text="Balance" />
+                        <MenuItem mnemonicParsing="false" text="Journal" />
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/6180065.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton alignment="BOTTOM_CENTER" layoutY="238.0" mnemonicParsing="false" opacity="0.87" popupSide="RIGHT" prefHeight="47.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Commerciale" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Aprovisionnement" />
+                        <MenuItem mnemonicParsing="false" text="Distribution" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/2108625.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="429.0" mnemonicParsing="false" opacity="0.94" popupSide="RIGHT" prefHeight="47.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Marketing" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Compte" />
+                        <MenuItem mnemonicParsing="false" text="Bilan" />
+                        <MenuItem mnemonicParsing="false" text="Balance" />
+                        <MenuItem mnemonicParsing="false" text="Journal" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/2920349.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+                  <MenuButton alignment="BOTTOM_CENTER" layoutX="1.0" layoutY="495.0" mnemonicParsing="false" opacity="0.91" popupSide="LEFT" prefHeight="47.0" prefWidth="282.0" style="-fx-background-color: #0E76A8;" text="Logistique" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Compte" />
+                        <MenuItem mnemonicParsing="false" text="Bilan" />
+                        <MenuItem mnemonicParsing="false" text="Balance" />
+                        <MenuItem mnemonicParsing="false" text="Journal" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/3585954.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+          </children>
+        </AnchorPane>
+        <ScrollPane>
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="588.0" prefWidth="588.0">
+                     <children>
+                        <BarChart fx:id="industrie" blendMode="DARKEN" layoutY="294.0" prefHeight="284.0" prefWidth="768.0" style="-fx-alternative-column-fill-visible: #2A3F54;" title="Industrielles">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" tickLabelFill="#336666">
+                                 <tickLabelFont>
+                                    <Font name="Arial Black" size="8.0" />
+                                 </tickLabelFont>
+                              </CategoryAxis>
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis prefHeight="181.0" prefWidth="52.0" side="LEFT" tickLabelFill="#336666">
+                                 <tickLabelFont>
+                                    <Font name="Arial Black" size="7.0" />
+                                 </tickLabelFont>
+                                 <effect>
+                                    <Glow level="0.58" />
+                                 </effect>
+                              </NumberAxis>
+                           </yAxis>
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                        </BarChart>
+                        <AreaChart fx:id="service" blendMode="DARKEN" layoutY="32.0" prefHeight="300.0" prefWidth="772.0" title="Entreprises">
+                           <xAxis>
+                              <CategoryAxis side="BOTTOM" tickLabelFill="#336666">
+                                 <tickLabelFont>
+                                    <Font name="Arial Black" size="8.0" />
+                                 </tickLabelFont>
+                              </CategoryAxis>
+                           </xAxis>
+                           <yAxis>
+                              <NumberAxis prefHeight="174.0" prefWidth="43.0" tickLabelFill="#336666">
+                                 <tickLabelFont>
+                                    <Font name="Arial Black" size="7.0" />
+                                 </tickLabelFont>
+                                 <effect>
+                                    <Glow level="0.57" />
+                                 </effect>
+                              </NumberAxis>
+                           </yAxis>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <ColorAdjust />
+                           </effect>
+                        </AreaChart>
+                     </children></AnchorPane>
+          </content>
+        </ScrollPane>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="258.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutX="-12.0" layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="299.0" style="-fx-background-color: #d7d8db;">
+                     <children>
+                        <Button layoutY="293.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.84" prefHeight="49.0" prefWidth="272.0" style="-fx-background-color: #0E76A8;" text="Listes de journeaux" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="46.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845899.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                        <MenuButton alignment="TOP_RIGHT" layoutY="18.0" mnemonicParsing="false" popupSide="TOP" prefHeight="34.0" prefWidth="268.0" style="-fx-background-color: #2a3f54;" text="Fonctions liées  &lt;&lt;" textFill="WHITE" />
+                        <MenuButton alignment="CENTER_RIGHT" layoutY="185.0" mnemonicParsing="false" opacity="0.9" prefHeight="49.0" prefWidth="270.0" style="-fx-background-color: #007bff;" text="Nouveaux documents" textFill="WHITE">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Aprovisionnement" />
+                              <MenuItem mnemonicParsing="false" text="Distribution" />
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845893.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </MenuButton>
+                        <MenuButton alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="396.0" mnemonicParsing="false" opacity="0.81" prefHeight="49.0" prefWidth="270.0" style="-fx-background-color: #007bff;" text="Banques partenaires" textFill="WHITE">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="BCDC">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/icones/3845851.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Equity Bank">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/banking/719324.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="UBA">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/banking/1799926.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="TMB">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/a.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Banque Mondiale">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/icones/240_F_78485253_g1f3todtaJww6SZ3S0YwzYcwiVx75rOb.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                           </items>
+                           <graphic>
+                              <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845851.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </MenuButton>
+                        <Pane layoutX="-1.0" layoutY="447.0" prefHeight="128.0" prefWidth="270.0">
+                           <children>
+                              <Label layoutX="76.0" layoutY="-1.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#2a3f54">
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="42.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../BANQUES/icones/2272972.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label layoutX="25.0" layoutY="526.0" opacity="0.77" prefHeight="52.0" prefWidth="365.0" text="         ©2022 All Rights Reserved. &#10;  Designed by  MarsTech &amp; MarsDesign. &#10;&#9;    Privacy and Terms" textFill="#2a3f54">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink layoutX="53.0" layoutY="55.0" text="Sign in bourse market" textFill="#0e76a8" visited="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845849.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Hyperlink>
+                        <Hyperlink layoutX="148.0" layoutY="107.0" prefHeight="35.0" prefWidth="120.0" text="Business Mail" textFill="#0e76a8" visited="true">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/business-e-mail.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Hyperlink>
+                     </children>
+                  </AnchorPane>
+                  <Hyperlink layoutX="7.0" layoutY="107.0" text="Sign in LinkedIn" textFill="#0e76a8" visited="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/ICONES2/4494497.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="10.0" layoutY="79.0" text="Notifications" textFill="#0e76a8" visited="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845878.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="152.0" layoutY="77.0" text="Agenda" textFill="#0e76a8" visited="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/external-analytics-business-process-outsourcing-flat-wichaiwi.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+               </children></AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+    </HBox>
+      <ProgressBar prefHeight="19.0" prefWidth="623.0" />
+      <ProgressBar layoutX="10.0" layoutY="641.0" prefHeight="19.0" prefWidth="470.0">
+         <VBox.margin>
+            <Insets left="900.0" top="-20.0" />
+         </VBox.margin>
+      </ProgressBar>
+      <ToolBar prefHeight="41.0" prefWidth="1360.0" style="-fx-background-color: #d7d8db;">
+         <items>
+            <HBox prefHeight="7.0" prefWidth="49.0">
+               <children>
+                  <ImageView fx:id="imgBack" fitHeight="29.0" fitWidth="28.0" nodeOrientation="RIGHT_TO_LEFT" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2879593.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="18.0" prefWidth="39.0">
+               <children>
+                  <ImageView fx:id="imgForward" fitHeight="23.0" fitWidth="23.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2879593.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="8.0" prefWidth="40.0">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/5234222%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="14.0" prefWidth="31.0">
+               <children>
+                  <ImageView fx:id="home" fitHeight="23.0" fitWidth="26.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3845704.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="188.0" layoutY="10.0" prefHeight="10.0" prefWidth="32.0">
+               <children>
+                  <ImageView fx:id="tools" fitHeight="22.0" fitWidth="29.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3845826.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="234.0" layoutY="10.0" prefHeight="10.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="91.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/4481212.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="c" prefHeight="16.0" prefWidth="160.0" promptText="Reacherd" />
+               </children>
+            </HBox>
+            <HBox layoutX="522.0" layoutY="10.0" prefHeight="11.0" prefWidth="38.0">
+               <children>
+                  <ImageView fx:id="print" fitHeight="30.0" fitWidth="31.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3168001.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+  </children>
+</VBox>

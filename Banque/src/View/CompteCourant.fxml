@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="642.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.CompteCourantController">
+  <children>
+    <SplitPane dividerPositions="0.22533136966126657, 0.7997054491899853" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1360.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="303.0" style="-fx-background-color: #d7d8db;">
+          <children>
+                  <Pane layoutY="-1.0" prefHeight="81.0" prefWidth="303.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="112.0" layoutY="8.0" prefHeight="55.0" prefWidth="206.0" text="InvestingBank" textFill="#2a3f54">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="logo" fitHeight="65.0" fitWidth="103.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Hyperlink layoutX="5.0" layoutY="68.0" text="Reception" textFill="#2a3f54" visited="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/134967.png" />
+                           </image>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="66.0" layoutY="102.0" text="Extraits de compte" textFill="#2a3f54" visited="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/banking/2382505.png" />
+                           </image>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="158.0" layoutY="132.0" text="En attente[1]" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3899662.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="162.0" layoutY="163.0" text="Traités" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3953471.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="74.0" endY="-2.0" layoutX="97.0" layoutY="153.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="39.0" endY="-76.0" layoutX="95.0" layoutY="208.0" opacity="0.52" startX="39.5" startY="4.5" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="78.0" endY="-2.0" layoutX="96.0" layoutY="180.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Hyperlink layoutX="164.0" layoutY="195.0" text="Archivés" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/148949.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="78.0" endY="-2.0" layoutX="96.0" layoutY="214.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Hyperlink layoutX="7.0" layoutY="243.0" text="Envoi" textFill="#2a3f54" visited="true">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/134965.png" />
+                           </image>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="65.0" layoutY="277.0" text="Enveloppes paiements" textFill="#2a3f54" visited="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/134974.png" />
+                           </image>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="160.0" layoutY="307.0" text="En attente[1]" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3899662.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="164.0" layoutY="338.0" text="Envoyées[5]" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845849.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="74.0" endY="-2.0" layoutX="99.0" layoutY="328.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="39.0" endY="-76.0" layoutX="97.0" layoutY="383.0" opacity="0.52" startX="39.5" startY="4.5" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="78.0" endY="-2.0" layoutX="98.0" layoutY="355.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Hyperlink layoutX="166.0" layoutY="370.0" text="Archivés" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/148949.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="78.0" endY="-2.0" layoutX="98.0" layoutY="389.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="40.0" endY="-128.0" layoutX="-35.0" layoutY="218.0" opacity="0.52" startX="40.0" startY="54.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="71.0" endY="-2.0" layoutX="-53.0" layoutY="93.0" opacity="0.52" startX="59.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="71.0" endY="-2.0" layoutX="-53.0" layoutY="273.0" opacity="0.52" startX="59.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="39.0" endY="-76.0" layoutX="11.0" layoutY="176.0" opacity="0.52" startX="39.0" startY="-48.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="81.0" endY="-2.0" layoutX="-8.0" layoutY="130.0" opacity="0.52" startX="59.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="39.0" endY="-76.0" layoutX="18.0" layoutY="351.0" opacity="0.52" startX="39.0" startY="94.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="81.0" endY="-2.0" layoutX="-2.0" layoutY="305.0" opacity="0.52" startX="59.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Hyperlink layoutX="75.0" layoutY="420.0" text="Appels domiciliations" textFill="#2a3f54" visited="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/templatemo_aboutus_hover.png" />
+                           </image>
+                           <effect>
+                              <Reflection />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                  </Hyperlink>
+                  <Hyperlink layoutX="157.0" layoutY="450.0" text="En attente[1]" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3899662.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Hyperlink layoutX="161.0" layoutY="481.0" text="Envoyées[5]" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845849.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="74.0" endY="-2.0" layoutX="96.0" layoutY="471.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="39.0" endY="-76.0" layoutX="94.0" layoutY="526.0" opacity="0.52" startX="39.5" startY="4.5" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="78.0" endY="-2.0" layoutX="95.0" layoutY="498.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Hyperlink layoutX="163.0" layoutY="513.0" text="Archivés" textFill="#2a3f54">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/148949.png" />
+                           </image>
+                           <effect>
+                              <Blend />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Line endX="86.0" endY="0.5" layoutX="2.0" layoutY="445.0" opacity="0.52" startX="54.5" startY="0.5" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="78.0" endY="-2.0" layoutX="95.0" layoutY="533.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+                  <Line endX="78.0" endY="-2.0" layoutX="302.0" layoutY="224.0" opacity="0.52" startX="39.0" startY="-2.0" stroke="#2a3f54" strokeWidth="0.55" />
+          </children>
+        </AnchorPane>
+        <ScrollPane prefHeight="566.0" prefWidth="782.0" style="-fx-background-color: #2a3f54;">
+          <content>
+            <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="616.0" prefWidth="754.0" style="-fx-background-color: #d7d8db;">
+                     <children>
+                        <Pane layoutX="-15.0" layoutY="1.0" opacity="0.84" prefHeight="34.0" prefWidth="784.0" style="-fx-background-color: #2a3f54; -fx-border-color: #2a3f52; -fx-border-width: 2;">
+                           <children>
+                              <Label layoutX="71.0" layoutY="3.0" opacity="0.8" prefHeight="32.0" prefWidth="467.0" text="Réception - Extraits de compte - En attente [1]" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Italic" size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="-4.0" layoutY="39.0" prefHeight="100.0" prefWidth="774.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="2.0" layoutY="-23.0" prefHeight="55.0" prefWidth="77.0" text="Selection" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="60.0" layoutY="-5.0" prefHeight="55.0" prefWidth="122.0" text="Document" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox layoutX="171.0" layoutY="11.0" prefWidth="150.0" promptText="Tous les documents" />
+                              <Label layoutX="60.0" layoutY="28.0" prefHeight="55.0" prefWidth="122.0" text="Tri par" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox layoutX="171.0" layoutY="44.0" prefWidth="150.0" promptText="Date de l'extrait" />
+                              <Label layoutX="116.0" layoutY="60.0" prefHeight="55.0" prefWidth="53.0" text="Tiers" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="177.0" layoutY="75.0" prefHeight="25.0" prefWidth="189.0" promptText="Tiers" />
+                              <Label layoutX="457.0" layoutY="-1.0" prefHeight="55.0" prefWidth="122.0" text="En date du" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="dates" layoutX="543.0" layoutY="16.0" prefHeight="25.0" prefWidth="196.0" promptText="Date" />
+                              <Label layoutX="414.0" layoutY="62.0" prefHeight="55.0" prefWidth="53.0" text="Au" textFill="#2a3f54">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="448.0" layoutY="73.0" prefHeight="25.0" prefWidth="303.0" promptText="Numero tiers" />
+                           </children></Pane>
+                        <TableView fx:id="transactions" layoutX="-5.0" layoutY="166.0" prefHeight="454.0" prefWidth="768.0">
+                          <columns>
+                            <TableColumn prefWidth="97.0" text="Banque" />
+                              <TableColumn prefWidth="178.0" text="Numero" />
+                              <TableColumn prefWidth="96.0" text="Date" />
+                              <TableColumn prefWidth="116.0" text="Montant" />
+                              <TableColumn prefWidth="81.0" text="Date" />
+                              <TableColumn prefWidth="111.0" text="Montant" />
+                              <TableColumn prefWidth="88.0" text="Type" />
+                          </columns>
+                        </TableView>
+                        <Line endX="-3.0" endY="17.0" layoutX="273.0" layoutY="152.0" opacity="0.52" startX="-3.0" startY="-13.0" stroke="#2a3f54" strokeWidth="0.55" />
+                        <Line endX="-3.0" endY="17.0" layoutX="485.0" layoutY="152.0" opacity="0.52" startX="-3.0" startY="-13.0" stroke="#2a3f54" strokeWidth="0.55" />
+                        <Line endX="-3.0" endY="17.0" layoutX="677.0" layoutY="152.0" opacity="0.52" startX="-3.0" startY="-13.0" stroke="#2a3f54" strokeWidth="0.55" />
+                        <Label layoutX="275.0" layoutY="126.0" prefHeight="55.0" prefWidth="144.0" text="Ancien solde" textFill="#2a3f54">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="494.0" layoutY="125.0" prefHeight="55.0" prefWidth="155.0" text="Nouveau solde" textFill="#2a3f54">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+          </content>
+        </ScrollPane>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="271.0" style="-fx-background-color: #d7d8db;">
+               <children>
+                  <Button layoutY="181.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.84" prefHeight="49.0" prefWidth="272.0" style="-fx-background-color: #0E76A8;" text="Listes de journeaux" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845899.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <MenuButton alignment="TOP_RIGHT" layoutY="18.0" mnemonicParsing="false" popupSide="TOP" prefHeight="34.0" prefWidth="268.0" style="-fx-background-color: #2a3f54;" text="Fonctions liées  &lt;&lt;" textFill="WHITE" />
+                  <MenuButton alignment="CENTER_RIGHT" layoutY="73.0" mnemonicParsing="false" opacity="0.9" prefHeight="49.0" prefWidth="270.0" style="-fx-background-color: #007bff;" text="Nouveaux documents" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Aprovisionnement" />
+                        <MenuItem mnemonicParsing="false" text="Distribution" />
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845893.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </MenuButton>
+                  <MenuButton alignment="CENTER_RIGHT" layoutX="-1.0" layoutY="284.0" mnemonicParsing="false" opacity="0.81" prefHeight="49.0" prefWidth="270.0" style="-fx-background-color: #007bff;" text="Banques partenaires" textFill="WHITE">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="BCDC">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845851.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Equity Bank">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/banking/719324.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem mnemonicParsing="false" text="UBA">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/banking/1799926.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="TMB">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/images%20(7).jpeg" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" text="Banque Mondiale">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../BANQUES/icones/3845851.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/icones/3845851.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </MenuButton>
+                  <Pane layoutX="-1.0" layoutY="447.0" prefHeight="128.0" prefWidth="270.0">
+                     <children>
+                        <Label layoutX="77.0" layoutY="-3.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#2a3f54">
+                           <font>
+                              <Font name="Baskerville Old Face" size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="9.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../BANQUES/Img/images.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutY="62.0" opacity="0.77" prefHeight="52.0" prefWidth="365.0" text="         ©2022 All Rights Reserved. &#10;  Designed by  MarsTech &amp; MarsDesign. &#10;&#9;    Privacy and Terms" textFill="#2a3f54">
+                           <font>
+                              <Font name="Baskerville Old Face" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+      <children>
+        <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Left status" HBox.hgrow="ALWAYS">
+          <font>
+            <Font size="11.0" fx:id="x3" />
+          </font>
+          <textFill>
+            <Color red="0.625" green="0.625" blue="0.625" fx:id="x4" />
+          </textFill>
+        </Label>
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+        <Label font="$x3" maxWidth="-1.0" text="Right status" textFill="$x4" HBox.hgrow="NEVER" />
+      </children>
+    </HBox>
+      <ToolBar prefHeight="37.0" prefWidth="1360.0" style="-fx-background-color: #d7d8db;">
+         <items>
+            <HBox prefHeight="28.0" prefWidth="58.0">
+               <children>
+                  <ImageView fx:id="imgBack" fitHeight="28.0" fitWidth="36.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/revese.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="30.0" prefWidth="52.0">
+               <children>
+                  <ImageView fx:id="imgForward" fitHeight="32.0" fitWidth="30.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2879593.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="30.0" prefWidth="53.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="29.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/5234222%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="30.0" prefWidth="50.0">
+               <children>
+                  <ImageView fx:id="home" fitHeight="29.0" fitWidth="41.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3208668.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="188.0" layoutY="10.0" prefHeight="30.0" prefWidth="48.0">
+               <children>
+                  <ImageView fx:id="tools" fitHeight="27.0" fitWidth="28.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3355360.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="234.0" layoutY="10.0" prefHeight="10.0" prefWidth="191.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/search.gif" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="c" prefHeight="16.0" prefWidth="160.0" promptText="Reacherd" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+  </children>
+</VBox>

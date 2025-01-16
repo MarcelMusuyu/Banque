@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+
+<DialogPane fx:id="boite" contentText="&#9;&#9;Les modifications apportées seront perdues &#10;&#9;&#9;&#9;si vous  ne les enregistrées pas!!!" headerText="                      Voulez-vous enregistrer votre travail ?" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="134.0" prefWidth="366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MessageController">
+   <buttonTypes>
+      <ButtonType fx:constant="YES" />
+      <ButtonType fx:constant="NO" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+   <effect>
+      <ColorAdjust />
+   </effect>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</DialogPane>

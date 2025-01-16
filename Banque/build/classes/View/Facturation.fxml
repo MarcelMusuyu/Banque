@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="content" prefHeight="647.0" prefWidth="1377.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FacturationController">
+    <children>
+      <Label layoutX="26.0" layoutY="522.0" prefHeight="17.0" prefWidth="87.0" text="Solde" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <HBox layoutX="-1.0" layoutY="-3.0" prefHeight="97.0" prefWidth="1374.0" style="-fx-background-color: white;">
+         <children>
+            <Label text="FACTURE" textFill="#2a3f54">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="88.0" fitWidth="127.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/icones/images%20(4).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="950.0" top="30.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label prefHeight="66.0" prefWidth="185.0" text="MarStore" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="23.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="-700.0" top="-30.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="521.0" layoutY="-20.0" prefHeight="66.0" prefWidth="678.0" text="NRCCM : CD/LSHI/623-245-0515-DGH  -Id Nat. 6-916-E466T- N°Impot : G65544788F" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-470.0" top="15.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3845783.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="354.0" layoutY="30.0" prefHeight="40.0" prefWidth="659.0" text="Tél : +24397120000/ +243824854986 - Email : MarsStore@gmail.org- www.MarsCorporation.com" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-720.0" top="80.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3845704.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="236.0" layoutY="5.0" prefHeight="66.0" prefWidth="474.0" text="465,AV likasi, Commune lubumbashi, ville lubumbashi" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-500.0" top="40.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/149060.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="193.0" layoutX="1028.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="193.0" layoutX="919.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/4413754.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutY="118.0" prefHeight="74.0" prefWidth="1374.0" style="-fx-background-color: #5a748f;">
+         <children>
+            <Label prefHeight="17.0" prefWidth="87.0" text="Adresse:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="40.0" top="45.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="33.0" prefWidth="87.0" text="Nom:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-90.0" />
+               </HBox.margin>
+            </Label>
+            <TextField id="adresse" fx:id="tfAdresse" prefHeight="25.0" prefWidth="355.0" promptText="Adresse">
+               <HBox.margin>
+                  <Insets left="-20.0" top="45.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField id="nom" fx:id="tfNom" prefHeight="25.0" prefWidth="299.0" promptText="Nom">
+               <HBox.margin>
+                  <Insets left="-380.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="21.0" prefWidth="110.0" text="Prenom:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="40.0" top="7.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="21.0" prefWidth="168.0" text="Telephone/Email:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-50.0" top="40.0" />
+               </HBox.margin>
+            </Label>
+            <TextField id="post" fx:id="tfPrenom" prefHeight="25.0" prefWidth="299.0" promptText="Prenom">
+               <HBox.margin>
+                  <Insets left="-150.0" top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField id="adresse" fx:id="tfContacts" prefHeight="25.0" prefWidth="363.0" promptText="Telephone /Mail">
+               <HBox.margin>
+                  <Insets left="-160.0" top="40.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="21.0" prefWidth="99.0" text="Date Facture:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="-150.0" top="7.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="tfDate" promptText="Date">
+               <HBox.margin>
+                  <Insets left="-5.0" top="5.0" />
+               </HBox.margin>
+            </DatePicker>
+         </children>
+      </HBox>
+      <Pane fx:id="tfPTTC" layoutX="-1.0" layoutY="207.0" prefHeight="324.0" prefWidth="1374.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="10.0" layoutY="-6.0" prefHeight="32.0" prefWidth="142.0" text="Listes Articles : " textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="Articles" layoutX="100.0" layoutY="-2.0" onAction="#Articles" prefHeight="25.0" prefWidth="126.0" promptText="Moniteur" />
+            <Label layoutX="552.0" layoutY="-14.0" prefHeight="32.0" prefWidth="79.0" text="N° Facture" textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="29.0" prefHeight="32.0" prefWidth="142.0" text="Désignation : " textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="28.0" prefHeight="32.0" prefWidth="142.0" text="Quantité:" textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="983.0" layoutY="22.0" prefHeight="32.0" prefWidth="142.0" text="Prix TTC :" textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="665.0" layoutY="22.0" prefHeight="32.0" prefWidth="142.0" text="Prix Unitaire:" textFill="#5a748f">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tbProduits" editable="true" layoutY="65.0" prefHeight="261.0" prefWidth="1374.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="colNumProd" prefWidth="155.0" text="N° Article" />
+                  <TableColumn fx:id="colDesignation" prefWidth="305.0" text="Désignation" />
+                  <TableColumn fx:id="colQte" prefWidth="213.0" text="Quantité" />
+                  <TableColumn fx:id="colPrixU" prefWidth="307.0" text="Prix Unitaire" />
+                  <TableColumn fx:id="colPrixTTC" prefWidth="370.0" text="Prix Total Toutes Taxes Comprises" />
+              </columns>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TableView>
+            <TextField fx:id="tfDesignation" editable="false" layoutX="183.0" layoutY="33.0" prefHeight="25.0" prefWidth="198.0" promptText="Designation" />
+            <TextField fx:id="tfQte" layoutX="458.0" layoutY="33.0" prefHeight="25.0" prefWidth="189.0" promptText="Quantite" />
+            <TextField fx:id="tfPrixUnitaire" editable="false" layoutX="748.0" layoutY="28.0" prefHeight="25.0" prefWidth="198.0" promptText="Prix Unitaire" />
+            <TextField fx:id="tfPrixTCC" editable="false" layoutX="1051.0" layoutY="26.0" prefHeight="25.0" prefWidth="256.0" promptText="Prix Total Taxes Comprises" />
+            <TextField fx:id="tfNumero1" layoutX="617.0" layoutY="-7.0" prefHeight="25.0" prefWidth="185.0" promptText="Numero Facture" />
+         </children>
+      </Pane>
+      <Pane layoutX="4.0" layoutY="570.0" prefHeight="118.0" prefWidth="1374.0" style="-fx-background-color: #375a7c;">
+         <children>
+            <Button fx:id="btnAjouter" layoutX="294.0" layoutY="86.0" mnemonicParsing="false" onAction="#Calculer" prefHeight="24.0" prefWidth="126.0" style="-fx-background-color: #0E76A8;" text="Ajouter" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnValider" layoutX="547.0" layoutY="87.0" mnemonicParsing="false" onAction="#Valider" prefHeight="24.0" prefWidth="126.0" style="-fx-background-color: #0E76A8;" text="Valider" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnImprimer" layoutX="851.0" layoutY="90.0" mnemonicParsing="false" onAction="#Imprimer" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #0E76A8;" text="Imprimer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="188.0" layoutY="41.0" prefHeight="32.0" prefWidth="142.0" text="Montant en lettre :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfMontantLettre" editable="false" layoutX="309.0" layoutY="45.0" prefHeight="25.0" prefWidth="338.0" promptText="Montant en lettre" />
+            <Label layoutX="1024.0" layoutY="54.0" prefHeight="32.0" prefWidth="142.0" text="Mode de paiement : " textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="tfModePaiement" layoutX="1166.0" layoutY="58.0" prefHeight="25.0" prefWidth="126.0" promptText="Carte bancaire" />
+            <Label layoutX="57.0" layoutY="4.0" prefHeight="32.0" prefWidth="142.0" text="Réduction:" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfReduction" layoutX="123.0" layoutY="7.0" prefHeight="25.0" prefWidth="185.0" promptText="Reduction" />
+            <Label layoutX="328.0" layoutY="4.0" prefHeight="32.0" prefWidth="142.0" text="Prix Total :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfPrixTOT" editable="false" layoutX="399.0" layoutY="9.0" prefHeight="25.0" prefWidth="198.0" promptText="Prix Total" />
+            <Label layoutX="799.0" layoutY="-3.0" prefHeight="32.0" prefWidth="142.0" text="Net Á PAYER :" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNetAPayer" editable="false" layoutX="916.0" layoutY="2.0" prefHeight="25.0" prefWidth="250.0" promptText="Net a payer" />
+            <Label layoutX="728.0" layoutY="43.0" prefHeight="32.0" prefWidth="142.0" text="Devise : " textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="devise" layoutX="777.0" layoutY="47.0" prefHeight="25.0" prefWidth="74.0" promptText="CDF" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

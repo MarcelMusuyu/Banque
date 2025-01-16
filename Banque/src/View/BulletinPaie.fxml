@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="creation" prefHeight="706.0" prefWidth="1360.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.geometry.Insets?&gt;&lt;?import javafx.scene.control.TextField?&gt;&lt;?import javafx.scene.layout.VBox?&gt;&lt;VBox layoutX=&quot;373.0&quot; layoutY=&quot;31.0&quot; prefHeight=&quot;482.0&quot; prefWidth=&quot;252.0&quot; spacing=&quot;20.0&quot; style=&quot;-fx-background-color: #2A3F54;&quot; xmlns=&quot;http://javafx.com/javafx/17&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;children&gt;      &lt;TextField prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot;&gt;         &lt;VBox.margin&gt;            &lt;Insets top=&quot;5.0&quot; /&gt;         &lt;/VBox.margin&gt;      &lt;/TextField&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;15.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;50.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;85.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;120.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;155.0&quot; prefHeight=&quot;35.0&quot; prefWidth=&quot;252.0&quot; /&gt;      &lt;TextField layoutX=&quot;10.0&quot; layoutY=&quot;190.0&quot; prefHeight=&quot;35.0&quot; prefWidth;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.BulletinPaieController">
+    <children>
+      <Pane layoutX="2.0" layoutY="33.0" prefHeight="684.0" prefWidth="1354.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="840.0" layoutY="25.0" prefHeight="20.0" prefWidth="108.0" text="En date du :" textFill="#2a3f54">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="date" layoutX="943.0" layoutY="27.0" prefHeight="26.0" prefWidth="202.0" promptText="date paiement" />
+            <Label layoutX="486.0" layoutY="7.0" prefHeight="27.0" prefWidth="182.0" text="BULLETIN DE PAIE" textFill="#2a3f54">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="94.0" fitWidth="259.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images%20(16).jpg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="nom" layoutX="219.0" layoutY="36.0" prefHeight="25.0" prefWidth="225.0" promptText="Nom de l'agent" />
+            <TextField fx:id="postnom" layoutX="475.0" layoutY="36.0" prefHeight="25.0" prefWidth="225.0" promptText="Postnom de l'agent" />
+            <TextField fx:id="matricule" layoutX="871.0" layoutY="60.0" prefHeight="25.0" prefWidth="245.0" promptText="Matricule de l'agent" />
+            <TextField fx:id="poste" layoutX="318.0" layoutY="66.0" prefHeight="25.0" prefWidth="225.0" promptText="Poste de l'agent" />
+            <TextField fx:id="departement" layoutX="616.0" layoutY="64.0" prefHeight="25.0" prefWidth="225.0" promptText="Departement de l'agent" />
+            <Line endX="949.0" layoutX="409.0" layoutY="96.0" startX="-423.5" stroke="#7d8c9a" strokeWidth="0.38" />
+            <VBox layoutX="1.0" layoutY="97.0" prefHeight="566.0" prefWidth="518.0" style="-fx-background-color: #d7d8db;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="100.0" text="Elements" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="889.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="310.0" layoutY="10.0" prefHeight="27.0" prefWidth="100.0" text="salaire de base" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="1038.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="42.0" prefHeight="27.0" prefWidth="240.0" text="salaire heures supplémentaires" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="1091.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="69.0" prefHeight="27.0" prefWidth="240.0" text="Primes" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="611.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="96.0" prefHeight="27.0" prefWidth="240.0" text="Indemnités de congé" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="637.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="123.0" prefHeight="27.0" prefWidth="240.0" text="Allocations familliales; extra-legale" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="585.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="150.0" prefHeight="27.0" prefWidth="240.0" text="Autres avantages" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="177.0" prefHeight="27.0" prefWidth="240.0" text="Remunérations brute taxable" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="721.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="206.0" prefHeight="27.0" prefWidth="240.0" text="Allocation familliale légale" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="715.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="123.0" prefHeight="27.0" prefWidth="240.0" text="Indemnités de transport" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="767.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="260.0" prefHeight="27.0" prefWidth="240.0" text="Indemnités de logement" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="793.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="287.0" prefHeight="27.0" prefWidth="240.0" text="Autres indemnités légales" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="721.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="206.0" prefHeight="27.0" prefWidth="240.0" text="Remunérations brute" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="860.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="310.0" layoutY="10.0" prefHeight="27.0" prefWidth="100.0" text="RETENUS" textFill="#2a3f54" underline="true">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="150.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="318.0" prefHeight="27.0" prefWidth="240.0" text="Impot sur salaire" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="843.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="403.0" prefHeight="27.0" prefWidth="240.0" text="Cotisation INSS quote part(3,5%)" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="917.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="430.0" prefHeight="27.0" prefWidth="240.0" text="Cotisation syndicale" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="941.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="457.0" prefHeight="27.0" prefWidth="240.0" text="Avance sur salaire" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="965.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="484.0" prefHeight="27.0" prefWidth="240.0" text="Saisie arret(1/5)" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="989.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="511.0" prefHeight="27.0" prefWidth="240.0" text="Autres retenues" textFill="#2a3f54">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="867.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="347.0" prefHeight="27.0" prefWidth="240.0" text="Total retenues" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Line endX="688.4025268554688" endY="-515.8885498046875" layoutX="-678.0" layoutY="1047.0" startX="1204.902587890625" startY="-515.6814575195312" stroke="#7d8c9a" strokeWidth="0.38" />
+                  <Label layoutX="10.0" layoutY="347.0" prefHeight="27.0" prefWidth="240.0" text="Remunérations net à payer" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ProgressBar layoutX="1.0" layoutY="666.0" prefHeight="17.0" prefWidth="700.0" />
+            <ProgressBar layoutX="712.0" layoutY="667.0" prefHeight="18.0" prefWidth="642.0" />
+            <VBox layoutX="521.0" layoutY="97.0" prefHeight="566.0" prefWidth="302.0" style="-fx-background-color: #d7d8db;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="100.0" text="Montant" textFill="#2a3f54">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tfSbase" prefHeight="25.0" prefWidth="368.0" promptText="salaire de base" />
+                  <TextField fx:id="tfSHsuppl" layoutX="10.0" layoutY="42.0" prefHeight="25.0" prefWidth="368.0" promptText="salaire heures supplémentaires" />
+                  <TextField fx:id="tfPrimes" layoutX="10.0" layoutY="42.0" prefHeight="25.0" prefWidth="368.0" promptText="Primes" />
+                  <TextField fx:id="tfIndemniteConge" layoutX="10.0" layoutY="92.0" prefHeight="25.0" prefWidth="368.0" promptText="Indemnités de congé" />
+                  <TextField fx:id="tfAllocationFam" layoutX="10.0" layoutY="117.0" prefHeight="25.0" prefWidth="368.0" promptText="Allocations familliales; extra-legale" />
+                  <TextField fx:id="tfAutresAvantages" layoutX="10.0" layoutY="142.0" prefHeight="25.0" prefWidth="368.0" promptText="Autres avantages" />
+                  <TextField fx:id="tfRemuBruteTaxable" editable="false" layoutX="10.0" layoutY="167.0" prefHeight="25.0" prefWidth="368.0" promptText="Remunérations brute taxable" />
+                  <TextField fx:id="tfAllocaFamLegales" layoutX="10.0" layoutY="192.0" prefHeight="25.0" prefWidth="368.0" promptText="Allocation familliale légale" />
+                  <TextField fx:id="tfIndemnitesTrans" layoutX="10.0" layoutY="217.0" prefHeight="25.0" prefWidth="368.0" promptText="Indemnités de transport" />
+                  <TextField fx:id="tfIndemniteLogement" layoutX="10.0" layoutY="242.0" prefHeight="25.0" prefWidth="368.0" promptText="Indemnités de logement" />
+                  <TextField fx:id="tfAutreIndemnites" layoutX="10.0" layoutY="267.0" prefHeight="25.0" prefWidth="368.0" promptText="Autres indemnités légales" />
+                  <TextField fx:id="tfRemunerationBrute" editable="false" layoutX="10.0" layoutY="292.0" prefHeight="25.0" prefWidth="368.0" promptText="Remunérations brute" />
+                  <TextField fx:id="tfImpotSalaire" layoutX="10.0" layoutY="317.0" prefHeight="25.0" prefWidth="368.0" promptText="Impot sur salaire">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="tfCotInss" layoutX="10.0" layoutY="342.0" prefHeight="25.0" prefWidth="368.0" promptText="Cotisation INSS quote part(3,5%)" />
+                  <TextField fx:id="tfCotSyndicale" layoutX="10.0" layoutY="367.0" prefHeight="25.0" prefWidth="368.0" promptText="Cotisation syndicale" />
+                  <TextField fx:id="tfAvanceSalaire" layoutX="10.0" layoutY="392.0" prefHeight="25.0" prefWidth="368.0" promptText="Avance sur salaire" />
+                  <TextField fx:id="tfSaisieArret" layoutX="10.0" layoutY="417.0" prefHeight="25.0" prefWidth="368.0" promptText="Saisie arret(1/5)" />
+                  <TextField fx:id="tfAutresRetenus" layoutX="10.0" layoutY="442.0" prefHeight="25.0" prefWidth="368.0" promptText="Autres retenues" />
+                  <TextField fx:id="tfTotalRetenus" editable="false" layoutX="10.0" layoutY="467.0" prefHeight="25.0" prefWidth="368.0" promptText="Total retenues" />
+                  <TextField fx:id="tfRemunerationNetPayer" editable="false" layoutX="10.0" layoutY="492.0" prefHeight="30.0" prefWidth="302.0" promptText="Remunérations net à payer en lettre" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="90.0" fitWidth="184.0" layoutX="1223.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/h.jpeg" />
+               </image>
+            </ImageView>
+            <VBox layoutX="825.0" layoutY="97.0" prefHeight="570.0" prefWidth="260.0" style="-fx-background-color: #2A3F54;">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="100.0" text="Montant" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="tfRemBrutTaxFinal" editable="false" layoutX="10.0" layoutY="167.0" prefHeight="25.0" prefWidth="368.0" promptText="Remunérations brute taxable">
+                     <VBox.margin>
+                        <Insets top="149.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfRemBrutFinal" editable="false" layoutX="10.0" layoutY="292.0" prefHeight="25.0" prefWidth="368.0" promptText="Remunérations brute">
+                     <VBox.margin>
+                        <Insets top="100.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfRemNetPayerFinal" editable="false" layoutX="10.0" layoutY="492.0" prefHeight="30.0" prefWidth="260.0" promptText="Remunérations net à payer">
+                     <VBox.margin>
+                        <Insets top="207.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+            <VBox layoutX="1086.0" layoutY="97.0" prefHeight="568.0" prefWidth="267.0" style="-fx-background-color: #2A3F54;">
+               <children>
+                  <ImageView fitHeight="183.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/Img/a.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="La bonne gestion des ressources &#10;humaines est capital&#10;pour tout entité qui se &#10;veut prosperité. De nos jours&#10;les entreprises ne contentent&#10;pas seulement de réaliser des&#10;gros bénefices mais aussi d'assurer&#10;les meilleures conditions de ses &#10;employés." wrappingWidth="271.3529052734375">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="10.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le calcul automatisé de differents&#10;élements du bulletin se fait à l'aide&#10;du bouton Remunerer" wrappingWidth="271.3529052734375">
+                     <font>
+                        <Font name="Century Gothic" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Button fx:id="calculer" mnemonicParsing="false" prefHeight="31.0" prefWidth="160.0" text="Remunerer">
+                     <VBox.margin>
+                        <Insets left="60.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="110.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/Img/c.jpeg" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <ProgressIndicator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="114.0" prefWidth="96.0">
+                     <VBox.margin>
+                        <Insets left="170.0" top="-110.0" />
+                     </VBox.margin>
+                  </ProgressIndicator>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <ToolBar layoutY="-2.0" prefHeight="41.0" prefWidth="1360.0" style="-fx-background-color: #2A3F54;">
+         <items>
+            <HBox prefHeight="13.0" prefWidth="60.0">
+               <children>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3208668.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="11.0" prefWidth="64.0">
+               <children>
+                  <ImageView fx:id="imgBack1" fitHeight="28.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2794872.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="3.0" prefWidth="67.0">
+               <children>
+                  <ImageView fx:id="imgBack11" fitHeight="26.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/4500429.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="7.0" prefWidth="76.0">
+               <children>
+                  <ImageView fx:id="imgBack1111" fitHeight="27.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/1008575.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="522.0" layoutY="10.0" prefHeight="7.0" prefWidth="66.0">
+               <children>
+                  <ImageView fx:id="imgBack11111211" fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/revese.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="568.0" layoutY="7.0" prefHeight="0.0" prefWidth="52.0">
+               <children>
+                  <ImageView fx:id="imgBack111112111" fitHeight="26.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/907027.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Button fx:id="valider" mnemonicParsing="false" onAction="#Valider" style="-fx-background-color: #2A3F54;" text="Calculer" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </items>
+      </ToolBar>
+    </children>
+</AnchorPane>

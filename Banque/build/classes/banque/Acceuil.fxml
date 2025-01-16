@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="716.0" prefWidth="1408.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banque.AcceuilController">
+   <children>
+      <VBox layoutY="61.0" prefHeight="99.0" prefWidth="1404.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="98.0" fitWidth="146.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label prefHeight="66.0" prefWidth="185.0" text="InvestingBank" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="120.0" top="-90.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="103.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="290.0" top="-85.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="150.0" layoutX="300.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/1771174.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="450.0" top="-95.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="93.0" fitWidth="125.0" layoutX="460.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/money-transfer.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="630.0" top="-100.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="105.0" fitWidth="114.0" layoutX="300.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="750.0" top="-95.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="190.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/icones/images%20(4).jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="870.0" top="-102.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="107.0" fitWidth="121.0" layoutX="880.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images.jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1040.0" top="-100.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="121.0" layoutX="1050.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/images.jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1150.0" top="-110.0" />
+               </VBox.margin>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="118.0" layoutX="1190.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/6078423.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="1270.0" top="-80.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <MenuBar id="menuBar" fx:id="menuBar" layoutX="-3.0" layoutY="-1.0" prefHeight="25.0" prefWidth="1411.0" style="-fx-background-color: #d7d8db;">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="CloseWindow1" mnemonicParsing="false" onAction="#femeture" text="New" />
+                  <MenuItem fx:id="CloseWindow11" mnemonicParsing="false" onAction="#femeture" text="Open" />
+                  <MenuItem fx:id="CloseWindow111" mnemonicParsing="false" onAction="#femeture" text="Clients" />
+                  <MenuItem fx:id="CloseWindow1111" mnemonicParsing="false" onAction="#femeture" text="Fournisseurs" />
+              <MenuItem fx:id="CloseWindow" mnemonicParsing="false" onAction="#femeture" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Tools">
+               <items>
+                  <MenuItem fx:id="calculator" mnemonicParsing="false" onAction="#Calculatrice" text="calculatrice" />
+                  <MenuItem fx:id="mItemMasque" mnemonicParsing="false" onAction="#Masquer" text="Hide/entreprise" />
+                  <MenuItem fx:id="mItemMasque1" mnemonicParsing="false" onAction="#Demasquer" text="Show/entreprise" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnEntreprise" mnemonicParsing="false" text="Entreprises">
+               <items>
+                  <MenuItem fx:id="commerciale" mnemonicParsing="false" onAction="#createEntreprise" text="Commerciale" />
+                  <MenuItem fx:id="industrie" mnemonicParsing="false" onAction="#createEntreprise" text="Industrielle" />
+                  <MenuItem fx:id="prestations" mnemonicParsing="false" onAction="#createEntreprise" text="Prestations" />
+                  <MenuItem fx:id="societe" mnemonicParsing="false" text="Societe" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="mnGuide" mnemonicParsing="false" onAction="#Toast" text="Guide" />
+                  <MenuItem fx:id="mnGuide1" mnemonicParsing="false" onAction="#Toast" text="Guide" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <VBox layoutX="1010.0" layoutY="199.0" opacity="0.92" prefHeight="363.0" prefWidth="365.0" spacing="15.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <Label alignment="CENTER_RIGHT" text="Total Rates" textFill="#fff9f9">
+               <font>
+                  <Font name="Baskerville Old Face" size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Line endX="13.985382080078125" endY="-140.4617919921875" opacity="0.38" startX="-215.93377685546875" startY="-140.46180725097656" stroke="#fffafa" strokeWidth="2.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="15.0" prefHeight="63.0" prefWidth="125.0" text="2.6" textFill="#fff9f9">
+               <font>
+                  <Font name="Calibri" size="54.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="15.0" top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="211.0" prefWidth="410.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <ProgressIndicator maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="66.0" progress="0.65">
+                     <HBox.margin>
+                        <Insets top="80.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+                  <ProgressBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="269.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+                  <ProgressIndicator layoutX="10.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="66.0" progress="0.78">
+                     <HBox.margin>
+                        <Insets left="-250.0" top="80.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+                  <ProgressIndicator layoutX="86.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="66.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="60.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+                  <ProgressIndicator layoutX="10.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="66.0" progress="0.34">
+                     <HBox.margin>
+                        <Insets left="20.0" top="80.0" />
+                     </HBox.margin>
+                  </ProgressIndicator>
+                  <ProgressBar layoutX="76.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="269.0" progress="0.65">
+                     <HBox.margin>
+                        <Insets left="-250.0" top="50.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+               </children>
+            </HBox>
+            <Label alignment="CENTER_RIGHT" layoutX="25.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="271.0" text="Stasitics using&#10;65% Banks VS 78% Firms" textFill="#fff9f9">
+               <font>
+                  <Font name="Calibri" size="19.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="-60.0" top="-10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="16.0" layoutY="576.0" text="Banking" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="574.0" text="Credit Cards" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="1048.0" layoutY="578.0" text="Business" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="583.0" prefHeight="99.0" prefWidth="281.0" text="Online Banking with bail&#10;pay checking&#10;Services &amp; Money Market" textFill="#2a3f54">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="405.0" layoutY="572.0" prefHeight="99.0" prefWidth="411.0" text="Most Popular Credit Cards Low Interest Credit Cards&#10;Rewards Credit Cards" textFill="#2a3f54">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="1049.0" layoutY="595.0" prefHeight="82.0" prefWidth="281.0" text="Business Cards&#10;Business Credit Cards&#10;Rewards Online" textFill="#2a3f54">
+         <font>
+            <Font name="Century Gothic" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="701.6666259765625" endY="-130.0" layoutX="699.0" layoutY="325.0" opacity="0.65" startX="-699.0" startY="-130.0" stroke="#2a3f54" strokeLineCap="ROUND" />
+      <Line endX="699.0" endY="-140.0" layoutX="709.0" layoutY="715.0" opacity="0.6" startX="-705.0" startY="-140.0" stroke="#2a3f54" strokeLineCap="ROUND" />
+      <ToolBar layoutX="1.0" layoutY="25.0" opacity="0.89" prefHeight="22.0" prefWidth="1407.0" style="-fx-background-color: #2A3F54;">
+         <items>
+            <HBox prefHeight="13.0" prefWidth="60.0">
+               <children>
+                  <ImageView fx:id="imgBack" fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/719324.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="23.0" prefWidth="64.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/1138038.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="21.0" prefWidth="67.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/1990568.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="22.0" prefWidth="66.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/1086741.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="188.0" layoutY="10.0" prefHeight="22.0" prefWidth="62.0">
+               <children>
+                  <ImageView fitHeight="31.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/988101.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="234.0" layoutY="10.0" prefHeight="21.0" prefWidth="66.0">
+               <children>
+                  <ImageView fx:id="imgBack111112" fitHeight="34.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/6191655.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="476.0" layoutY="10.0" prefHeight="25.0" prefWidth="62.0">
+               <children>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/6197607.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="549.0" layoutY="9.0" prefHeight="26.0" prefWidth="52.0">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/banking/1771174.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <Pane layoutX="1.0" layoutY="163.0" prefHeight="27.0" prefWidth="1407.0" style="-fx-background-color: #0E76A8;">
+         <children>
+            <Hyperlink fx:id="banking" layoutX="20.0" layoutY="-3.0" prefHeight="30.0" prefWidth="105.0" text="Banking" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu fx:id="listeMenu1">
+                     <items>
+                        <MenuItem fx:id="menuItemBilanBanc" mnemonicParsing="false" onAction="#Banking" text="Bilan bancaire" />
+                        <MenuItem mnemonicParsing="false" text="Taux interet" />
+                        <MenuItem fx:id="menuItemVirement" mnemonicParsing="false" onAction="#VirementBancaire" text="Virement bancaire" />
+                        <MenuItem mnemonicParsing="false" text="Taux BCC" />
+                        <MenuItem fx:id="menuItemReport" mnemonicParsing="false" onAction="#Customers" text="Rapport clientele" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Hyperlink>
+            <Hyperlink fx:id="business" layoutX="157.0" layoutY="-6.0" prefHeight="36.0" prefWidth="174.0" text="Business Banking" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu fx:id="listeMenu3">
+                     <items>
+                        <MenuItem fx:id="bankTransact" mnemonicParsing="false" onAction="#operations" text="Account transacts" />
+                        <MenuItem mnemonicParsing="false" text="Domiciliations" />
+                        <MenuItem mnemonicParsing="false" text="Bank transacts" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Hyperlink>
+            <Hyperlink fx:id="investing" layoutX="375.0" layoutY="-7.0" prefHeight="36.0" prefWidth="125.0" text="Investing" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu fx:id="listeMenu2">
+                     <items>
+                        <MenuItem fx:id="mnItemConnection" mnemonicParsing="false" onAction="#AccountInvest" text="Connection" />
+                        <MenuItem mnemonicParsing="false" text="Nouveau compte" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Hyperlink>
+            <Hyperlink fx:id="planning" layoutX="558.0" layoutY="-6.0" prefHeight="36.0" prefWidth="125.0" text="Planning" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <contextMenu>
+                  <ContextMenu fx:id="listeMenu">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Gestion de risques de Marché" />
+                        <MenuItem mnemonicParsing="false" text="Ratios de rentabilité" />
+                        <MenuItem mnemonicParsing="false" text="Prets liés à la banque" />
+                     </items>
+                  </ContextMenu>
+               </contextMenu>
+            </Hyperlink>
+            <Hyperlink fx:id="card" layoutX="742.0" layoutY="-6.0" onMouseMoved="#Infobull" prefHeight="36.0" prefWidth="163.0" text="Credit Cards" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="statistics" layoutX="951.0" layoutY="-6.0" prefHeight="36.0" prefWidth="164.0" text="Statistics" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="Bintelligent" layoutX="1152.0" layoutY="-6.0" prefHeight="36.0" prefWidth="185.0" text="Business Intelligent" textFill="WHITE" visited="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+      <VBox layoutX="6.0" layoutY="199.0" opacity="0.92" prefHeight="374.0" prefWidth="380.0" spacing="15.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <Label text="Sign on to your account" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="28.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="countSelect" prefHeight="29.0" prefWidth="320.0" promptText="Select an account">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button fx:id="valider1" mnemonicParsing="false" onAction="#Selected" style="-fx-background-color: #2A3F54;" text="Valider" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" top="-10.0" />
+               </VBox.margin>
+            </Button>
+            <Label layoutX="10.0" layoutY="10.0" text="Apply for a new account" textFill="WHITE">
+               <font>
+                  <Font name="Baskerville Old Face" size="28.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="newCount" layoutX="10.0" layoutY="58.0" prefHeight="29.0" prefWidth="320.0" promptText="Select an account">
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button fx:id="valider2" mnemonicParsing="false" onAction="#newSelected" style="-fx-background-color: #2A3F54;" text="Valider" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" top="-10.0" />
+               </VBox.margin>
+            </Button>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="231.0" text="See more from Bank investing&#10;link to corporate and small&#10;Business Services,rate changes,&#10;planning etc." textFill="#fff9f9">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="70.0" top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <ChoiceBox fx:id="services" prefHeight="36.0" prefWidth="39.0">
+               <VBox.margin>
+                  <Insets top="-70.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Line endX="107.89956665039062" endY="-140.04759216308594" opacity="0.38" startX="-215.93377685546875" startY="-140.46180725097656" stroke="#fffafa" strokeWidth="2.0">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Line>
+            <ChoiceBox fx:id="countries" layoutX="10.0" layoutY="194.0" prefHeight="17.0" prefWidth="125.0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ChoiceBox>
+            <Label layoutX="65.0" layoutY="185.0" text="Select a country" textFill="#fff9f9">
+               <font>
+                  <Font name="Baskerville Old Face" size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="150.0" top="-65.0" />
+               </VBox.margin>
+            </Label>
+            <Label layoutX="65.0" layoutY="308.0" text="we serve 500 millions &#10;customers in over 200&#10;countries" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="150.0" top="-18.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="389.0" layoutY="207.0" prefHeight="348.0" prefWidth="623.0">
+         <children>
+            <ImageView fx:id="acceuil" fitHeight="375.0" fitWidth="618.0" focusTraversable="true" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/aaa.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <Label layoutX="638.0" layoutY="609.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="583.0" layoutY="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/Img/images.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="504.0" layoutY="666.0" opacity="0.77" prefHeight="52.0" prefWidth="365.0" text="©2022 All Rights Reserved. MarsTech &amp; MarsDesign. &#10;&#9;&#9;&#9;&#9;Privacy and Terms" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

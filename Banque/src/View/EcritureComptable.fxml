@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="content" prefHeight="658.0" prefWidth="1374.0" style="-fx-background-color: #2A3F54;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.EcritureComptableController">
+    <children>
+      <HBox layoutX="-1.0" layoutY="3.0" prefHeight="120.0" prefWidth="1380.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="108.0" fitWidth="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(5).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="137.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images%20(20).jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="1000.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label prefHeight="66.0" prefWidth="185.0" text="MarStore" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="23.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="-700.0" top="-30.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="521.0" layoutY="-20.0" prefHeight="66.0" prefWidth="678.0" text="NRCCM : CD/LSHI/623-245-0515-DGH  -Id Nat. 6-916-E466T- N°Impot : G65544788F" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="-470.0" top="-5.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="354.0" layoutY="30.0" prefHeight="59.0" prefWidth="721.0" text="Tél : +24397120000/ +243824854986 - Email : MarsStore@gmail.org- www.MarsCorporation.com" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="-720.0" top="50.0" />
+               </HBox.margin>
+            </Label>
+            <Label layoutX="236.0" layoutY="5.0" prefHeight="66.0" prefWidth="638.0" text="465,AV likasi, Commune lubumbashi, ville lubumbashi" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="15.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="-600.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+            <ImageView fitHeight="120.0" fitWidth="193.0" layoutX="1028.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="-150.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <Pane layoutY="125.0" prefHeight="201.0" prefWidth="1380.0" style="-fx-background-color: white;">
+         <children>
+            <Pane fx:id="tfPTTC111" layoutX="-1.0" layoutY="150.0" prefHeight="50.0" prefWidth="1380.0" style="-fx-background-color: #2A3F59;">
+               <children>
+                  <Text fx:id="resume4" fill="#f9fafc" layoutX="7.0" layoutY="16.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: black;" text="Marché non concurrentiel : dans ce marché la connaissance du Prix de revient permet de fixer le Prix de vente" wrappingWidth="496.73828125">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.68" />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="tfPTTC11" layoutX="-1.0" layoutY="101.0" prefHeight="48.0" prefWidth="1380.0" style="-fx-background-color: #2A3F57;">
+               <children>
+                  <Text fx:id="resume2" fill="#f9fafc" layoutX="11.0" layoutY="14.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Marché concurrentiel : dans ce marché le Prix de vente est fixé par conccurence." wrappingWidth="504.7382812499999">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.68" />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="tfPTTC1" layoutX="-1.0" layoutY="52.0" prefHeight="48.0" prefWidth="1380.0" style="-fx-background-color: #2A3F52;">
+               <children>
+                  <Text fx:id="resume1" fill="#f9fafc" layoutX="10.0" layoutY="15.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Marché reglementé : dans ce marché le Prix de vente est fixé à l'avance par le pouvoir public c-à-d l'Etat." wrappingWidth="504.73828125">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.68" />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane fx:id="tfPTTC" layoutX="-1.0" layoutY="1.0" prefHeight="50.0" prefWidth="1380.0" style="-fx-background-color: #2A3F50;">
+               <children>
+                  <Text fx:id="resume3" fill="#f9fafc" layoutX="8.0" layoutY="12.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-background-color: blue;" text="Le Prix de vente est la valeur d'échange d'un bien sur le marché. De ce prix va dépendre le montant du resultat analytique et la rentabilité commerciale de l'entreprise. L'élement essentiel pour déterminer le prix de vente est le Marché." wrappingWidth="651.73828125">
+                     <font>
+                        <Font name="Century Gothic" size="13.0" />
+                     </font>
+                     <effect>
+                        <Glow level="0.68" />
+                     </effect>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutY="331.0" prefHeight="90.0" prefWidth="1380.0" style="-fx-background-color: #336666;" />
+      <Label layoutX="24.0" layoutY="360.0" prefHeight="31.0" prefWidth="154.0" text="Prix de revient" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prixrevient" layoutX="24.0" layoutY="391.0" prefHeight="25.0" prefWidth="273.0" />
+      <Label layoutX="325.0" layoutY="359.0" prefHeight="31.0" prefWidth="154.0" text="Majoration en %" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="majoration" layoutX="325.0" layoutY="390.0" prefHeight="25.0" prefWidth="273.0" />
+      <Label layoutX="652.0" layoutY="361.0" prefHeight="31.0" prefWidth="154.0" text="Prix de vente" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="prixvente" editable="false" layoutX="652.0" layoutY="392.0" prefHeight="25.0" prefWidth="273.0" />
+      <Label layoutX="8.0" layoutY="331.0" prefHeight="31.0" prefWidth="946.0" text="Détermination du prix de vente en fixant un pourcentage sur le prix de revient, appelé Majoration" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

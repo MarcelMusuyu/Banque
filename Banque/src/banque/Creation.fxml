@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="content" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.98" prefHeight="566.0" prefWidth="784.0" style="-fx-background-color: #2A3F54;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="banque.CreationController">
+    <children>
+      <Button id="btnConvertir" fx:id="btnEnregistrer" layoutX="216.0" layoutY="382.0" mnemonicParsing="false" onAction="#insertRecord" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #0E76A8;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="25.0" layoutY="345.0" prefHeight="17.0" prefWidth="87.0" text="Solde" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField id="nom" fx:id="tfNom" layoutX="59.0" layoutY="117.0" prefHeight="25.0" prefWidth="330.0" promptText="Nom" />
+      <TextField id="MONTANT" fx:id="tfMontant" layoutX="75.0" layoutY="343.0" prefHeight="25.0" prefWidth="347.0" promptText="Montant" />
+      <TextField id="post" fx:id="tfPostnom" layoutX="77.0" layoutY="160.0" prefHeight="25.0" prefWidth="330.0" promptText="Postnom" />
+      <TextField id="adresse" fx:id="tfAdresse" layoutX="77.0" layoutY="202.0" prefHeight="25.0" prefWidth="392.0" promptText="Adresse" />
+      <Label layoutX="461.0" layoutY="122.0" prefHeight="17.0" prefWidth="87.0" text="Date creation:" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField id="txtMontant" fx:id="tfDate" editable="false" layoutX="547.0" layoutY="119.0" prefHeight="25.0" prefWidth="160.0" promptText="Date" />
+      <PasswordField fx:id="tfNumero" layoutX="137.0" layoutY="289.0" prefHeight="25.0" prefWidth="330.0" promptText="Numero compte" />
+      <ComboBox fx:id="devise" layoutX="443.0" layoutY="344.0" prefHeight="25.0" prefWidth="87.0" promptText="USD" />
+      <Button id="btnConvertir" fx:id="btnAnnuler" layoutX="466.0" layoutY="385.0" mnemonicParsing="false" onAction="#annuler" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #0E76A8;" text="ANNULER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="552.0" layoutY="299.0" prefHeight="25.0" prefWidth="87.0" text="Type compte :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="type" accessibleText="USD" layoutX="636.0" layoutY="299.0" prefHeight="25.0" prefWidth="102.0" promptText="Epargne" />
+      <TextField id="adresse" fx:id="tfContacts" layoutX="81.0" layoutY="245.0" prefHeight="25.0" prefWidth="300.0" promptText="Telephone /Mail" />
+      <ComboBox fx:id="genre" layoutX="591.0" layoutY="227.0" prefHeight="25.0" prefWidth="100.0" promptText="Masculin" />
+      <HBox layoutX="-1.0" layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="109.0" prefWidth="784.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+            </ImageView>
+            <Label prefHeight="66.0" prefWidth="185.0" text="Create Account" textFill="#2a3f54">
+               <font>
+                  <Font name="Baskerville Old Face" size="23.0" />
+               </font>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </Label>
+            <ImageView fitHeight="99.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/1771174.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/2976565.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="84.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/g.jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets top="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="102.0" fitWidth="131.0" layoutX="545.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/1138038.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="375.0" layoutY="452.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#f8f8f8">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="315.0" layoutY="474.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/Img/images.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="236.0" layoutY="514.0" opacity="0.77" prefHeight="52.0" prefWidth="365.0" text="©2022 All Rights Reserved. MarsTech &amp; MarsDesign. &#10;&#9;&#9;&#9;&#9;Privacy and Terms" textFill="#f8f8f8">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="173.0" layoutX="554.0" layoutY="430.0" opacity="0.31" startX="-466.0" stroke="#f8f8f8" strokeWidth="0.5" />
+      <Label layoutX="281.0" layoutY="419.0" opacity="0.82" prefHeight="52.0" prefWidth="102.0" text="New to site ?" textFill="#f8f8f8">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="HyperCreate" layoutX="366.0" layoutY="432.0" text="Sign in" textFill="#f8f8f8" visited="true">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Hyperlink>
+      <Label layoutX="18.0" layoutY="121.0" prefHeight="17.0" prefWidth="87.0" text="Nom :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="162.0" prefHeight="17.0" prefWidth="87.0" text="Postnom :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="202.0" prefHeight="17.0" prefWidth="87.0" text="Adresse :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="244.0" prefHeight="17.0" prefWidth="87.0" text="Contacts :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="12.0" layoutY="290.0" prefHeight="17.0" prefWidth="117.0" text="Numerp de compte :" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="562.0" layoutY="338.0" prefHeight="25.0" prefWidth="87.0" text="Etat compte" textFill="#f8f8f8">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="type1" accessibleText="USD" layoutX="646.0" layoutY="338.0" prefHeight="25.0" prefWidth="102.0" promptText="National" />
+    </children>
+   <effect>
+      <Blend />
+   </effect>
+</AnchorPane>

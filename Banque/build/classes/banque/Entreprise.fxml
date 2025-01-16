@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DisplacementMap?>
+<?import javafx.scene.effect.FloatMap?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="Entreprise" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1394.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+      <MenuBar layoutY="-3.0" prefHeight="30.0" prefWidth="1394.0" style="-fx-background-color: #d7d8db;">
+        <menus>
+          <Menu fx:id="mnfinanciere" text="Financiere">
+            <items>
+              <MenuItem mnemonicParsing="false" text="capital propre" />
+                  <MenuItem mnemonicParsing="false" text="autofinancement" />
+                  <MenuItem mnemonicParsing="false" text="capitaux empruntés" />
+                  <MenuItem mnemonicParsing="false" text="securité financière" />
+            </items>
+          </Menu>
+          <Menu fx:id="mncommerciale" mnemonicParsing="false" text="Commerciale">
+            <items>
+                  <Menu fx:id="mnApprov" mnemonicParsing="false" text="Approvisionnement">
+                     <items>
+                        <MenuItem fx:id="stock" mnemonicParsing="false" onAction="#Stock" text="Gestion stock">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="S" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mndistribution" mnemonicParsing="false" text="Distribution">
+                     <items>
+                        <MenuItem fx:id="facturation" mnemonicParsing="false" onAction="#Facture" text="Facturation">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="F" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="livraison" mnemonicParsing="false" text="Livraison" />
+                        <MenuItem fx:id="caisse" mnemonicParsing="false" text="Caisse" />
+                        <MenuItem fx:id="ventes" mnemonicParsing="false" onAction="#Ventes" text="Ventes" />
+                     </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu fx:id="mncomptabilite" mnemonicParsing="false" text="Comptabilite">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Compte" />
+                  <MenuItem mnemonicParsing="false" text="Bilan" />
+                  <MenuItem mnemonicParsing="false" text="Balance" />
+                  <MenuItem mnemonicParsing="false" text="Journal" />
+                  <MenuItem mnemonicParsing="false" text="Plan comptable" />
+            </items>
+          </Menu>
+            <Menu fx:id="mnsociale" mnemonicParsing="false" text="Sociale">
+               <items>
+                  <Menu fx:id="mnfiscale" mnemonicParsing="false" text="Fiscalite">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Impot" />
+                        <MenuItem mnemonicParsing="false" text="Taxe" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mncomptabilite1" mnemonicParsing="false" text="Ressources humaines">
+                     <items>
+                        <MenuItem fx:id="mnItemsalaireBase" mnemonicParsing="false" text="salaire de base" />
+                        <MenuItem fx:id="mnItemfichePaie" mnemonicParsing="false" onAction="#FichePaie" text="fiche de paie">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="I" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator></MenuItem>
+                        <MenuItem fx:id="mnItemIndemnites" mnemonicParsing="false" text="indemnités" />
+                        <MenuItem fx:id="mnItemAllocations" mnemonicParsing="false" text="allocations familliales" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" text="Syndicale" />
+               </items>
+            </Menu>
+            <Menu fx:id="mninformatique" mnemonicParsing="false" text="Informatique">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="bureautique" />
+                  <MenuItem mnemonicParsing="false" text="reseaux" />
+                  <MenuItem mnemonicParsing="false" text="imprimerie" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnlogistique" mnemonicParsing="false" text="Logistique">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Amortissement" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnadministraative" mnemonicParsing="false" text="Administrative">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Prevoir" />
+                  <MenuItem mnemonicParsing="false" text="Organiser" />
+                  <MenuItem mnemonicParsing="false" text="Commander" />
+                  <MenuItem mnemonicParsing="false" text="Coordonner" />
+                  <MenuItem mnemonicParsing="false" text="Controler" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnproduction" mnemonicParsing="false" text="Production">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnsecurite" mnemonicParsing="false" text="Securite">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnstatistiques" mnemonicParsing="false" text="Statistiques">
+               <items>
+                  <Menu fx:id="mnproduction1" mnemonicParsing="false" text="Ventes">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="villes" />
+                        <MenuItem mnemonicParsing="false" text="mois" />
+                        <MenuItem mnemonicParsing="false" text="genres" />
+                        <MenuItem mnemonicParsing="false" onAction="#RepportSales" text="rayons de ventes" />
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mnproduction11" mnemonicParsing="false" text="Achats">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="marchandises" />
+                        <MenuItem mnemonicParsing="false" text="matières premières" />
+                        <MenuItem mnemonicParsing="false" text="emballages" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="mnGenerales" mnemonicParsing="false" onAction="#States" text="Generales" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnmarketing" mnemonicParsing="false" text="Marketing">
+               <items>
+                  <MenuItem fx:id="mnItempublicite" mnemonicParsing="false" onAction="#publicite" text="publicité" />
+                  <MenuItem mnemonicParsing="false" text="promotion" />
+                  <MenuItem mnemonicParsing="false" text="produit" />
+                  <MenuItem mnemonicParsing="false" text="prix" />
+                  <MenuItem mnemonicParsing="false" text="place" />
+               </items>
+            </Menu>
+            <Menu fx:id="mnmarketing1" mnemonicParsing="false" text="Secretariat">
+               <items>
+                  <MenuItem fx:id="lettre" mnemonicParsing="false" onAction="#Correspondance" text="correspondance" />
+                  <MenuItem mnemonicParsing="false" text="circulaire" />
+                  <MenuItem mnemonicParsing="false" text="communication" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <HBox layoutX="554.0" layoutY="174.0" prefHeight="221.0" prefWidth="824.0" spacing="10.0" style="-fx-background-color: white;">
+         <children>
+            <ProgressIndicator cache="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="82.0" progress="0.76" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="5.0" top="75.0" />
+               </HBox.margin>
+               <effect>
+                  <DisplacementMap>
+                     <mapData>
+                        <FloatMap />
+                     </mapData>
+                  </DisplacementMap>
+               </effect>
+            </ProgressIndicator>
+            <ProgressBar prefHeight="19.0" prefWidth="231.0">
+               <HBox.margin>
+                  <Insets left="-100.0" top="10.0" />
+               </HBox.margin>
+            </ProgressBar>
+            <Label prefHeight="62.0" prefWidth="75.0" text="76%">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="-10.0" />
+               </HBox.margin>
+            </Label>
+            <ProgressIndicator layoutX="625.0" layoutY="90.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="95.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets left="-200.0" top="75.0" />
+               </HBox.margin>
+            </ProgressIndicator>
+            <ProgressIndicator layoutX="625.0" layoutY="90.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="77.0" prefWidth="87.0" progress="0.67" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="70.0" />
+               </HBox.margin>
+            </ProgressIndicator>
+            <Line endX="-98.7843017578125" endY="187.46446228027344" startX="-100.0" stroke="#e1d7d7" strokeWidth="5.0">
+               <effect>
+                  <Glow level="0.88" />
+               </effect>
+            </Line>
+            <Text fill="#2a3f54" lineSpacing="4.0" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="Les Decideurs, ils s'agit de l'organe principal d'une entreprise peut importe son domaine d'activité, car de leurs décisions dépend le bon fonctionnement de cette derniere. Ils font parti du conseil d'administration, du comité de gestion etc.." wrappingWidth="424.73828125">
+               <HBox.margin>
+                  <Insets right="-430.0" top="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.68" />
+               </effect>
+            </Text>
+            <Text fill="#2a3f54" lineSpacing="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="les entreprises commerciales, les firmes, les societes,les coorporations, les banques , les consortiums, les societés investissent des milliers dans une activité  rentable et benefique.  La survie d'une banque depends de son interet , celle des entreprises, depend de son benefice et profit" wrappingWidth="483.13671875">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <effect>
+                  <Glow level="0.66" />
+               </effect>
+            </Text>
+         </children>
+      </HBox>
+      <HBox layoutX="-2.0" layoutY="64.0" prefHeight="104.0" prefWidth="1394.0" style="-fx-background-color: #2A3F54;">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/téléchargement%20(1).jpeg" />
+               </image>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="139.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/images%20(18).jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="200.0" layoutX="203.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/entreprise-business-contrat-patron-b9e0df-0@1x.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="167.0" layoutX="396.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/c.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="111.0" fitWidth="177.0" layoutX="589.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/banking/images%20(2).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="174.0" layoutX="782.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/téléchargement%20(5).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="110.0" fitWidth="176.0" layoutX="975.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/téléchargement%20(1).jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="109.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../BANQUES/Img/images%20(3).jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <ToolBar layoutX="2.0" layoutY="27.0" prefHeight="30.0" prefWidth="1394.0" style="-fx-background-color: #0E76A8;">
+        <items>
+            <HBox prefHeight="16.0" prefWidth="56.0">
+               <children>
+                  <ImageView fx:id="imgBack" fitHeight="26.0" fitWidth="34.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/revese.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="6.0" prefHeight="21.0" prefWidth="44.0">
+               <children>
+                  <ImageView fx:id="imgForward" fitHeight="28.0" fitWidth="33.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/2879593.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="48.0" layoutY="6.0" prefHeight="19.0" prefWidth="40.0">
+               <children>
+                  <ImageView fitHeight="26.0" fitWidth="32.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/5234222%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="124.0" layoutY="6.0" prefHeight="11.0" prefWidth="39.0">
+               <children>
+                  <ImageView fx:id="home" fitHeight="26.0" fitWidth="32.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3208668.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="188.0" layoutY="10.0" prefHeight="27.0" prefWidth="41.0">
+               <children>
+                  <ImageView fx:id="tools" fitHeight="26.0" fitWidth="32.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/onebit_21.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="234.0" layoutY="10.0" prefHeight="20.0" prefWidth="192.0">
+               <children>
+                  <ImageView fitHeight="24.0" fitWidth="91.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/search.gif" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="c" prefHeight="23.0" prefWidth="164.0" promptText="Reacherd" />
+               </children>
+            </HBox>
+            <HBox layoutX="522.0" layoutY="10.0" prefHeight="17.0" prefWidth="42.0">
+               <children>
+                  <ImageView fx:id="print" fitHeight="26.0" fitWidth="37.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/3168001.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox layoutX="568.0" layoutY="7.0" prefHeight="19.0" prefWidth="42.0">
+               <children>
+                  <ImageView fitHeight="28.0" fitWidth="34.0" onKeyPressed="#soldeAccount" onMouseClicked="#soldeAccount" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../BANQUES/icones/onglet-graphique.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+        </items>
+      </ToolBar>
+      <BarChart fx:id="industrie" blendMode="DARKEN" layoutX="-4.0" layoutY="407.0" prefHeight="284.0" prefWidth="697.0" style="-fx-alternative-column-fill-visible: #2A3F54;" title="Industrielles">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="8.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+         </xAxis>
+         <yAxis>
+            <NumberAxis prefHeight="181.0" prefWidth="52.0" side="LEFT" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="7.0" />
+               </tickLabelFont>
+               <effect>
+                  <Glow level="0.58" />
+               </effect>
+            </NumberAxis>
+         </yAxis>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </BarChart>
+      <LineChart fx:id="commerce" layoutX="-2.0" layoutY="176.0" prefHeight="240.0" prefWidth="546.0" title="Commerciales">
+         <xAxis>
+            <CategoryAxis fx:id="categoryLineChart" side="BOTTOM" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="8.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="numberLineChart" prefHeight="136.0" prefWidth="47.0" side="LEFT" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="7.0" />
+               </tickLabelFont>
+               <effect>
+                  <Glow level="0.49" />
+               </effect>
+            </NumberAxis>
+         </yAxis>
+         <effect>
+            <ColorAdjust>
+               <input>
+                  <ColorAdjust />
+               </input>
+            </ColorAdjust>
+         </effect>
+      </LineChart>
+      <AreaChart fx:id="service" blendMode="DARKEN" layoutX="683.0" layoutY="378.0" prefHeight="267.0" prefWidth="680.0" title="Societés">
+         <xAxis>
+            <CategoryAxis side="BOTTOM" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="8.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+         </xAxis>
+         <yAxis>
+            <NumberAxis prefHeight="174.0" prefWidth="43.0" tickLabelFill="#336666">
+               <tickLabelFont>
+                  <Font name="Arial Black" size="7.0" />
+               </tickLabelFont>
+               <effect>
+                  <Glow level="0.57" />
+               </effect>
+            </NumberAxis>
+         </yAxis>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </AreaChart>
+      <Label layoutX="731.0" layoutY="604.0" opacity="0.64" prefHeight="81.0" prefWidth="230.0" text="Bank Investing" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="676.0" layoutY="623.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../BANQUES/Img/images.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="552.0" layoutY="653.0" opacity="0.77" prefHeight="45.0" prefWidth="465.0" text="©2022 All Rights Reserved. MarsTech &amp; MarsDesign. &#10;&#9;&#9;&#9; Privacy and Terms" textFill="#2a3f54">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+      </Label>
+    </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>

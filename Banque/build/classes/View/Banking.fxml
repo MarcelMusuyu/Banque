@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="279.0" prefWidth="265.0" spacing="5.0" style="-fx-background-color: #2A3F54; -fx-background-radius: 2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.BankingController">
+   <children>
+      <Hyperlink fx:id="bilan" onAction="#Bilanbancaire" text="Bilan bancaire" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="78.0" layoutY="36.0" text="Gestion de risques de Marché" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="tauxInteret" layoutX="78.0" layoutY="37.0" text="Taux dinteret" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="78.0" layoutY="38.0" text="Ratios de rentabilité" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="78.0" layoutY="39.0" text="Prets liés à la banque" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="59.0" layoutY="172.0" text="Virement bancaire" textFill="WHITE" visited="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</VBox>
